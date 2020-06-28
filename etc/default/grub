@@ -2,7 +2,7 @@ GRUB_DEFAULT=saved
 GRUB_TIMEOUT=1
 #GRUB_TIMEOUT_STYLE=hidden
 GRUB_DISTRIBUTOR='Lenoux'
-GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=0 nowatchdog apparmor=1 security=apparmor udev.log_priority=3 elevator=mq-deadline loglevel=3 mitigations=off" 
+GRUB_CMDLINE_LINUX_DEFAULT="psmouse.synaptics_intertouch=0 nowatchdog apparmor=1 security=apparmor udev.log_priority=3 elevator=none loglevel=3 mitigations=off" 
 # i915.fastboot=1"
 #GRUB_CMDLINE_LINUX=""
 
