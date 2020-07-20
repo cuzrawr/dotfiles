@@ -1,9 +1,4 @@
-# theme for plank
-
-#
-#       Without crap shaddows over icons
-#
-
+##This file theme for plank
 #place in /usr/share/plank/themes/<themename>/dock.theme
 [PlankTheme]
 TopRoundness=0
@@ -14,7 +9,7 @@ LineWidth=0
 TopPadding=-12
 BottomPadding=2
 #The size of item indicators, in tenths of a percent of IconSize.
-IndicatorSize=5
+IndicatorSize=12
 #The size of the icon-shadow behind every item, in tenths of a percent of IconSize.
 IconShadowSize=0
 #The height (in percent of IconSize) to bounce an icon when the application sets urgent.
@@ -22,7 +17,7 @@ UrgentBounceHeight=1
 #The height (in percent of IconSize) to bounce an icon when launching an application.
 LaunchBounceHeight=0.90000000000000002
 #The size of the urgent glow (shown when dock is hidden), in tenths of a percent of IconSize.
-GlowSize=1000
+#GlowSize=100
 #The total time (in ms) to show the hidden-dock urgent glow.
 GlowTime=10000
 #The time (in ms) of each pulse of the hidden-dock urgent glow.
