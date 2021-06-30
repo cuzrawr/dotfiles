@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = flameshot-git
+
+[Action]
+Description = Replacing weird icon...
+When = PostTransaction
+Exec = /usr/bin/sed -i 's/Icon\=org.flameshot.Flameshot/Icon\=flameshot/' /usr/share/applications/org.flameshot.Flameshot.desktop

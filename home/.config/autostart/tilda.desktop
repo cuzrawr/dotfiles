@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Tilda
+Comment=TildaTerm
+Exec=tilda
+Type=Application
+Terminal=false
+Hidden=false
+

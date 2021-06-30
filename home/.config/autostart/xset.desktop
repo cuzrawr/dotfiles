@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/xset r rate 200 100
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+X-GNOME-Autostart-Delay=6
+Name[en_US]=xset

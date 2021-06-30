@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = chromium-snapshot-bin
+
+[Action]
+Description = Replacing weird icon...
+When = PostTransaction
+Exec = /usr/bin/sed -i 's/Icon\=chromium-snapshot-bin/Icon\=chromium/' /usr/share/applications/chromium-snapshot-bin.desktop

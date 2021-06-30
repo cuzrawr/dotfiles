@@ -1,0 +1,125 @@
+URxvt.tabbed.autohide: true
+URxvt*perl-ext: tabbed
+! URxvt.font: xft:Terminus:pixelsize=12
+URxvt*saveLines: 10536
+URxvt*scrollBar_right:false
+
+! #icon
+URxvt*iconFile: /usr/share/icons/Faenza/apps/64/lxterminal.png
+
+! !###
+URxvt.font: xft:DejaVu Sans Mono:Regular:pixelsize=14:antialias=true
+URxvt.boldFont: xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true
+
+! #URxvt*background: white
+URxvt*transparent:true
+URxvt*scrollBar:false
+URxvt*borderLess:false
+URxvt*foreground:2  ! #Font color.
+
+! #ursl
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:    /usr/bin/firefox
+URxvt.matcher.button:   1
+
+urxvt*shading: 72
+urxvt*cursorColor: 4
+urxvt*tintColor: black
+urxvt*blurRadius: 4
+! #urxvt*font:-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-r
+urxvt*geometry: 100x24
+urxvt*cursorBlink: true
+URxvt.tabbed.tabbar-fg: 4
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    0
+URxvt.tabbed.tab-bg:    12
+
+! #
+! #URxvt.intensityStyles: false
+! #
+
+! *background: #002b36
+! *foreground: #657b83
+*cursorColor: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3
+
+! #####STJERM terminal emulator config
+! # see http://code.google.com/p/stjerm-terminal-emulator/wiki/ConfigurationOptions
+
+stjerm.key: f1
+stjerm.opacity: 81
+stjerm.foreground: 1793D1
+stjerm.font: Monospace 12
+stjerm.lines: 1337
+stjerm.position: right
+stjerm.showtab: visibility
+stjerm.width: 1366
+stjerm.height: 512
+stjerm.autohide: false
+
+Xcursor.theme: ecliz
+! #Xcursor.size:  24
+
+! #fonthinting
+! Xft.autohint: 0
+! Xft.lcdfilter: lcddefault
+! Xft.hintstyle: hintfull
+! Xft.hinting: 1
+! Xft.antialias: 1
+! Xft.dpi: 96
+! Xft.rgba: rgb
+
+
+!rofi.opacity: 81
+!rofi.width: 1366
+!rofi.lines: 15
+!rofi.columns: 1
+!rofi.font: Hack 9
+!rofi.fg: #1aa
+!rofi.bg: #333
+!rofi.hlfg: #333
+!rofi.hlbg: #1aa
+!rofi.bc: #1aa
+!rofi.bw: 2
+!rofi.loc: 0
+!rofi.padding: 2
+!rofi.yoffset: -2
+!rofi.xoffset: 0
+!rofi.fixed-num-lines: false
+!rofi.hmode: false
+!rofi.terminal: x-terminal-emulator
+!rofi.ssh-set-title: true
+!rofi.key: F2
+!rofi.rkey: mod1+F2
+!rofi.skey: mod1+F3

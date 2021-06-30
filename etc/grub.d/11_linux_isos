@@ -1,0 +1,32 @@
+#NOTWORKfix
+#!/bin/sh
+cat <<EOF
+
+menuentry 'Pentoo Linux Live (no verify)' --class gnu-linux --class os {
+        set isofile="/mnt/pentoo-full-amd64-hardened.iso"
+        loopback loop (hd0,5)$isofile
+        #loopback loop $isofile
+
+        linux (loop)/boot/pentoo init=/linuxrc nox nodhcp secureconsole overlayfs max_loop=256 dokeymap     video=uvesafb:mtrr:3,ywrap,1024x768-16 console=tty0 net.ifnames=0 scsi_mod.use_blk>
+         #cdboot
+        initrd (loop)/boot/pentoo.igz
+}
+
+
+
+
+
+
+#menuentry 'wifislax64-2.2_dev_21092020.iso'  --class gnu-linux --class os {
+
+menuentry "Wifislax64 ISO" --class gnu-linux --class os {
+    echo "Please wait..."
+    set isofile="/mnt/wifislax64-2.2dev21092020.iso"
+    export isofile
+    search --set=root --file $isofile
+    loopback loop $isofile
+    linux (loop)/boot/vmlinuz livemedia=/dev/sda5:$isofile kbd=us locale=en_US.utf8  rw iso-scan/filename=$isofile
+    initrd (loop)/boot/initrd.xz
+}
+
+EOF

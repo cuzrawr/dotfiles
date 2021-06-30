@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="net", ATTR{address}=="HWWWWWWWWWWWWW", RUN+="/usr/bin/ip link set dev %k address notHWWWWWWWWWWWWW"
+ACTION=="add", SUBSYSTEM=="net", ATTR{address}=="HWWWWWWWWWWWWW", RUN+="/usr/bin/ip link set dev %k address notHWWWWWWWWWWWWW"

@@ -1,0 +1,29 @@
+{
+  // validate at chrome://policy/
+  "UrlKeyedAnonymizedDataCollectionEnabled": false,
+  "WebRtcEventLogCollectionAllowed": false,
+  "BackgroundModeEnabled": false,
+  "SyncDisabled": true,
+  "ReportPolicyData": false,
+  "HomepageLocation": "127.0.0.1",
+  "MediaRouterCastAllowAllIPs": false,
+  "EnableMediaRouter": false,
+  "TranslateEnabled": false,
+  "MetricsReportingEnabled": false,
+  //"DeviceMetricsReportingEnabled": false,
+  "PasswordManagerEnabled": false,
+  "SearchSuggestEnabled": false,
+  "SpellCheckServiceEnabled": false,
+  "BlockThirdPartyCookies": true,
+  "ReportExtensionsAndPluginsData": false,
+  "ReportMachineIDData": false,
+  "ReportUserIDData": false,
+  "ReportVersionData": false,
+  "SafeBrowsingEnabled": false,
+  "NetworkPredictionOptions": 0,
+  "MediaRecommendationsEnabled": false
+  //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}",
+  //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}",
+  //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}",
+
+}
