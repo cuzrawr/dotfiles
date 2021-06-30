@@ -17,8 +17,14 @@
 :ufw-user-limit-accept - [0:0]
 ### RULES ###
 
-### tuple ### allow udp 1024:65535 255.255.255.255 1024:65535 0.0.0.0 in
--A ufw-user-input -p udp -m multiport --dports 1024:65535 -m multiport --sports 1024:65535 -d 255.255.255.255 -s 0.0.0.0 -j ACCEPT
+### tuple ### allow udp 5678 0.0.0.0/0 any 0.0.0.0/0 in
+-A ufw-user-input -p udp --dport 5678 -j ACCEPT
+
+### tuple ### allow udp 5678 0.0.0.0/0 any 0.0.0.0/0 out
+-A ufw-user-output -p udp --dport 5678 -j ACCEPT
+
+### tuple ### allow udp 1024:65535 0.0.0.0/0 1024:65535 0.0.0.0/0 in
+-A ufw-user-input -p udp -m multiport --dports 1024:65535 -m multiport --sports 1024:65535 -j ACCEPT
 
 ### END RULES ###
 

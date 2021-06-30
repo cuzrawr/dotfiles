@@ -3,6 +3,6 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-#LIBVA_DRIVER_NAME=i965
-#QT_QPA_PLATFORMTHEME=qt5ct
-QT_STYLE_OVERRIDE=kvantum
+QT_QPA_PLATFORMTHEME="qt5ct"
+GTK_THEME=Arc-Dark:dark
+NO_AT_BRIDGE=1

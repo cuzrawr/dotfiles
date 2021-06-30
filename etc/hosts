@@ -1,0 +1,7 @@
+# Static table lookup for hostnames.
+# See hosts(5) for details.
+127.0.0.1	localhost localhost.localdomain desktop
+127.0.1.1	localhost localhost.localdomain desktop
+::1	localhost ip6-localhost ip6-loopback localhost.localdomain desktop
+ff02::1 ip6-allnodes 
+ff02::2 ip6-allrouters
