@@ -1,0 +1,22 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+UUID=<urUUUUUUUUIIIIIID>	/              ext4    lazytime,commit=120,errors=remount-ro 0 1                
+
+#swap 
+
+#UUID=<urUUUUUUUUIIIIIID> none swap defaults 0 0
+#defaults,noatime 0 1
+tmpfs                                     /tmp           tmpfs   defaults,size=1%,noatime,mode=1777 0 0
+tmpfs                                     /var/log       tmpfs   defaults,size=2%,noexec,noatime,mode=1777 0 0
+
+#
+tmpfs /var/run tmpfs defaults,rw,nosuid,mode=0755 0 0
+tmpfs /var/lock tmpfs defaults,rw,noexec,nosuid,nodev,mode=1777 0 0
+none /dev/shm tmpfs defaults,nosuid,noexec,rw 0 0
+# chromium shit
+tmpfs /home/<USERNAME>/.cache/chromium tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+# mozilla shit
+tmpfs /home/<USERNAME>/.cache/mozilla tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+
