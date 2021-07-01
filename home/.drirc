@@ -1,0 +1,7 @@
+<device screen="0" driver="iris">
+      </application>   
+         <application name="chrome" executable="chrome">
+         <!-- glxgears should not synchronize with vertical refresh, show full fps -->
+         <option name="vblank_mode" value="0"/>
+      </application>
+</device>
