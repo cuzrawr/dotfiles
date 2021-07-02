@@ -21,9 +21,13 @@
   "ReportVersionData": false,
   "SafeBrowsingEnabled": false,
   "NetworkPredictionOptions": 0,
-  "MediaRecommendationsEnabled": false
-  //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}",
-  //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}",
-  //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}",
+  "MediaRecommendationsEnabled": false,
+  // enforce google as search
+  // exmple https://www.google.com/search?q=%s&gl=us
+  "DefaultSearchProviderSearchURL": "{google:baseURL}search?q={searchTerms}&gl=us",
+  "DefaultSearchProviderEnabled": true
+  //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}&gl=us",
+  //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}&gl=us",
+  //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}&gl=us",
 
 }
