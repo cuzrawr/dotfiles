@@ -11,7 +11,6 @@
   "EnableMediaRouter": false,
   "TranslateEnabled": false,
   "MetricsReportingEnabled": false,
-  //"DeviceMetricsReportingEnabled": false,
   "PasswordManagerEnabled": false,
   "SearchSuggestEnabled": false,
   "SpellCheckServiceEnabled": false,
@@ -32,13 +31,35 @@
   "WebRtcAllowLegacyTLSProtocols": false,
   "DownloadRestrictions": 0,
   "RemoteAccessHostFirewallTraversal": false,
-  "CloudPrintProxyEnabled": false, 
-  "DnsPrefetchingEnabled": false,
+  "CloudPrintProxyEnabled": false,
   "Disable3DAPIs": true,
   "SyncDisabled": true,
   "CookiesSessionOnlyForUrls": [ "none" ],
+  //
+  // https://support.google.com/chrome/a/answer/7517525
+  // http://www.chromium.org/administrators/configuring-policy-for-extensions
+  //
   // privacy badger - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
-  "ExtensionInstallForcelist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
+  //"ExtensionInstallForcelist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
+  //"ExtensionInstallAllowlist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
+   "ExtensionSettings": {
+        "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
+             "installation_mode": "force_installed",
+             "update_url": "https://clients2.google.com/service/update2/crx"
+        }
+    },
+   "3rdparty": {
+        "extensions": {
+            "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
+                // disable weird headers
+                "checkForDNTPolicy": false,
+                "sendDNTSignal": false,
+                // no intro
+                "showIntroPage": false,
+                "showCounter": false
+            }
+        }
+    },
   // enforce google as search
   // exmple https://www.google.com/search?q=%s&gl=us
   "DefaultSearchProviderSearchURL": "{google:baseURL}search?q={searchTerms}&gl=us",
@@ -46,5 +67,6 @@
   //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}&gl=us",
-
 }
+
+
