@@ -1,3 +1,4 @@
+// Use with ~/.config/chromium-flags.conf
 {
   // validate at chrome://policy/
   "UrlKeyedAnonymizedDataCollectionEnabled": false,
@@ -30,6 +31,12 @@
   "WebRtcUdpPortRange": "0-0",
   "WebRtcAllowLegacyTLSProtocols": false,
   "DownloadRestrictions": 0,
+  "RemoteAccessHostFirewallTraversal": false,
+  "CloudPrintProxyEnabled": false, 
+  "DnsPrefetchingEnabled": false,
+  "Disable3DAPIs": true,
+  "SyncDisabled": true,
+  "CookiesSessionOnlyForUrls": [ "none" ],
   // privacy badger - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
   "ExtensionInstallForcelist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
   // enforce google as search
