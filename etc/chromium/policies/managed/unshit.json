@@ -25,6 +25,13 @@
   "SpellcheckEnabled": false,
   "BuiltInDnsClientEnabled": false,
   "DisableAuthNegotiateCnameLookup": true,
+  "AdditionalDnsQueryTypesEnabled": false,
+  "BrowserSignin": 0,
+  "WebRtcUdpPortRange": "0-0",
+  "WebRtcAllowLegacyTLSProtocols": false,
+  "DownloadRestrictions": 0,
+  // privacy badger - pkehgijcmpdhfbdbbnkijodmdjhbjlgp
+  "ExtensionInstallForcelist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
   // enforce google as search
   // exmple https://www.google.com/search?q=%s&gl=us
   "DefaultSearchProviderSearchURL": "{google:baseURL}search?q={searchTerms}&gl=us",
