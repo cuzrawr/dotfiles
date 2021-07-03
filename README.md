@@ -52,14 +52,15 @@ Plugins, updatethis (old)
 Here we making request headers similar to curl (_currently some are ignored_)
 
 
-```
+```BASH
 User-Agent:   (_get latest popular user agent_)
 Accept: */*
 ```
 
 
 others are blank:
-```
+
+```BASH
 Accept-Language
 Accept-Encoding
 Upgrade-Insecure-Requests
@@ -79,6 +80,7 @@ cache-control
 how it should looks like:
 
 ![image description here](chrome-extension.png)
+
 
 ----
 
