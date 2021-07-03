@@ -53,23 +53,36 @@ Here we making request headers similar to curl (_currently some are ignored_)
 
 User-Agent: (_get latest popular user agent_)
 
-Accept: */*
+Accept: "*/*"
 
-others are blank:
+others (are blank):
 
 Accept-Language
+
 Accept-Encoding
+
 Upgrade-Insecure-Requests
+
 Sec-Fetch-Site
+
 Sec-Fetch-Mode
+
 Sec-Fetch-User
+
 Sec-Fetch-Dest
+
 Cache-Control
+
 DNT
+
 dnt
+
 Connection
+
 Sec-GPC
+
 cache-control
+
 
 how it should looks like:
 
