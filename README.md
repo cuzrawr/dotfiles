@@ -2,9 +2,9 @@
 Configs that i apparently forget in new environmets
 
 
-# chrome/ium
+# chromium
 
-Enabled {.enabled}
+Enabled
 -------
 
 1.  [Canvas Blocker - Fingerprint
@@ -30,7 +30,10 @@ Enabled {.enabled}
 13. [uBlock
     Origin](https://chrome.google.com/webstore/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm "Finally, an efficient blocker. Easy on CPU and memory.")
 
+
+
 Configs
 -------
-~/.config/chromium-flags.conf
-/etc/chromium/policies/managed/unshit.json
+* ~/.config/chromium-flags.conf
+
+* /etc/chromium/policies/managed/unshit.json

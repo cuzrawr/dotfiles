@@ -1,5 +1,40 @@
 // Use with ~/.config/chromium-flags.conf
 {
+  //32mb disk cache
+  "DiskCacheSize": 32000000,
+  "DiskCacheDir": "/tmp",
+  // disable printing
+  "PrintingEnabled": false,
+  "PrintingEnabled": false,
+  // disable dns intercept checks
+  // comment if you use proxy
+  //"DNSInterceptionChecksEnabled": false,
+
+  // remove browser history on exit
+  "ClearBrowsingDataOnExitList": [
+  "browsing_history",
+  "download_history",
+  "cookies_and_other_site_data",
+  "cached_images_and_files",
+  "password_signin",
+  "autofill",
+  "site_settings",
+  "hosted_app_data"
+],
+
+  // show warn when use http on https sites
+  "InsecureFormsWarningsEnabled": false,
+  // disable screen share
+  // through getDisplayMedia() or Desktop Capture API
+  "ScreenCaptureAllowed": false,
+  "SharedClipboardEnabled": false,
+  // disable report linux apps to google
+  //"ReportCrostiniUsageEnabled": false,
+
+
+  // incrase reporting cycle time to max
+
+  //"":,
   // validate at chrome://policy/
   "UrlKeyedAnonymizedDataCollectionEnabled": false,
   "WebRtcEventLogCollectionAllowed": false,
@@ -76,7 +111,7 @@
   // enforce google as search
   // exmple https://www.google.com/search?q=%s&gl=us
   "DefaultSearchProviderSearchURL": "{google:baseURL}search?q={searchTerms}&gl=us",
-  "DefaultSearchProviderEnabled": true,
+  "DefaultSearchProviderEnabled": true
   //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}&gl=us",
