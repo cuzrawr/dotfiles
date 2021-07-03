@@ -82,5 +82,16 @@ how it should looks like:
 ![image description here](chrome-extension.png)
 
 
+Test it:
+
+run
+```BASH
+ncat -lk 8001
+
+```
+
+then go to http://127.0.0.1:8001
+ from your browser
+
 ----
 
