@@ -34,7 +34,7 @@
   "CloudPrintProxyEnabled": false,
   "Disable3DAPIs": true,
   "SyncDisabled": true,
-  "CookiesSessionOnlyForUrls": [ "none" ],
+  //"CookiesSessionOnlyForUrls": [ "none" ],
   //
   // https://support.google.com/chrome/a/answer/7517525
   // http://www.chromium.org/administrators/configuring-policy-for-extensions
@@ -43,13 +43,21 @@
   //"ExtensionInstallForcelist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
   //"ExtensionInstallAllowlist": [ "pkehgijcmpdhfbdbbnkijodmdjhbjlgp" ],
    "ExtensionSettings": {
-        "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
+   	"*": {
+   		// full perm list (Review permissions)
+   		// https://support.google.com/chrome/a/answer/7515036
+   		// https://chromeenterprise.google/policies/?policy=ExtensionSettings
+    "blocked_permissions": ["usb", "idle", "clipboardRead", "audioCapture", "videoCapture", "power", "serial", "tts"]
+  }
+    /*    "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
              "installation_mode": "force_installed",
              "update_url": "https://clients2.google.com/service/update2/crx"
-        }
+        }*/
     },
    "3rdparty": {
         "extensions": {
+
+        	// privacy badger
             "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
                 // disable weird headers
                 "checkForDNTPolicy": false,
@@ -57,16 +65,24 @@
                 // no intro
                 "showIntroPage": false,
                 "showCounter": false
-            }
+            },
+            // Mod header (remove header trash)
+  /*          "idgpnmonknjnojddfkpgkljpfnnfcklj": {
+            	  "externally_connectable": {
+    "matches": ["none"]
+         }*/
         }
     },
   // enforce google as search
   // exmple https://www.google.com/search?q=%s&gl=us
   "DefaultSearchProviderSearchURL": "{google:baseURL}search?q={searchTerms}&gl=us",
-  "DefaultSearchProviderEnabled": true
+  "DefaultSearchProviderEnabled": true,
   //"DefaultSearchProviderSearchURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderSuggestURLPostParams": "q={searchTerms}&gl=us",
   //"DefaultSearchProviderInstantURLPostParams": "q={searchTerms}&gl=us",
+
+  // blocking some extensions homepages/domains
+  //"URLBlocklist": ["*.ads.*"]
 }
 
 
