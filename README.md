@@ -18,7 +18,7 @@ Configs
 
 `/etc/chromium/policies/managed/unshit.json`
 
-Plugins, updatethis (old)
+Plugins,   /////// updatethis (old)
 -------
 
 1.  [Canvas Blocker - Fingerprint
