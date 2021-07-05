@@ -4,7 +4,8 @@ GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR='Lenoux'
 
 # for tests only
-GRUB_CMDLINE_LINUX_DEFAULT="i915.mitigations=off logo.nologo audit=0 psmouse.synaptics_intertouch=1 nowatchdog apparmor=0 scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 vt.global_cursor_default=0 rd.udev.log-priority=0 udev.log-priority=0 ipv6.disable=1 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 loglevel=2   memory_corruption_check=0  memory_corruption_check_period=0  mem_encrypt=off  pnp.debug=0  selinux=0 mitigations=off"
+GRUB_CMDLINE_LINUX_DEFAULT="i915.mitigations=off logo.nologo audit=0 psmouse.synaptics_intertouch=1 nowatchdog apparmor=0 scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 vt.global_cursor_default=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 loglevel=2   memory_corruption_check=0  memory_corruption_check_period=0  mem_encrypt=off  pnp.debug=0  selinux=0 mitigations=off"
+# ipv6.disable=1
 #intel_iommu=on,igfx_off 
 # mitigations=off"
 #GRUB_CMDLINE_LINUX="psmouse.synaptics_intertouch=1 nowatchdog apparmor=1 security=apparmor udev.log_priority=3 elevator=none loglevel=3 mitigations=off"
@@ -33,7 +34,7 @@ GRUB_TERMINAL_OUTPUT=console
 #GRUB_GFXMODE=auto
 
 # Uncomment to allow the kernel use the same resolution used by grub
-GRUB_GFXPAYLOAD_LINUX=keep
+# GRUB_GFXPAYLOAD_LINUX=keep
 
 # Uncomment if you want GRUB to pass to the Linux kernel the old parameter
 # format "root=/dev/xxx" instead of "root=/dev/disk/by-uuid/xxx"
@@ -47,6 +48,9 @@ GRUB_GFXPAYLOAD_LINUX=keep
 #GRUB_COLOR_NORMAL="light-gray/black"
 #GRUB_COLOR_HIGHLIGHT="green/black"
 
+
+
+# old arch colors
 GRUB_COLOR_NORMAL="light-blue/black"
 GRUB_COLOR_HIGHLIGHT="light-cyan/blue"
 
