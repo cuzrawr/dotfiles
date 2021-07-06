@@ -3,7 +3,7 @@
 <channel name="xfce4-settings-editor" version="1.0">
   <property name="last" type="empty">
     <property name="window-width" type="int" value="1194"/>
-    <property name="window-height" type="int" value="591"/>
+    <property name="window-height" type="int" value="652"/>
     <property name="paned-position" type="int" value="227"/>
   </property>
 </channel>

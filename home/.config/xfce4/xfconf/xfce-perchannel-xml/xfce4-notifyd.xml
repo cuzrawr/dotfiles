@@ -7,17 +7,10 @@
   <property name="log-level-apps" type="uint" value="0"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
-      <value type="string" value="bleachbit"/>
-      <value type="string" value="Firefox"/>
-      <value type="string" value="Xfce volume control"/>
-      <value type="string" value="Xfce volume daemon"/>
-      <value type="string" value="Xfce4-notifyd settings"/>
-      <value type="string" value="xfce4-power-manager"/>
-      <value type="string" value="xfce4-settings-helper"/>
     </property>
   </property>
   <property name="theme" type="string" value="Default"/>
-  <property name="expire-timeout" type="int" value="4"/>
+  <property name="expire-timeout" type="int" value="8"/>
   <property name="do-slideout" type="bool" value="false"/>
   <property name="initial-opacity" type="double" value="0.960000"/>
 </channel>

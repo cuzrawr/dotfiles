@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=xfce4-appfinder -c
+Icon=oomox
+StartupNotify=false
+Terminal=false
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+Name=Run Program...
+Comment=Enter a command you want to launch
+X-XFCE-Source=file:///usr/share/applications/xfce4-run.desktop
+Path=

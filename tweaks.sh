@@ -7,3 +7,5 @@ tune2fs -l
 
 #
 #
+# check
+chattr +i ~/.config/xfce4/xfce4-screenshooter

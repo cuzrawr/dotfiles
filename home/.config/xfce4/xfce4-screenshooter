@@ -1,0 +1,9 @@
+# chattr +i this
+screenshot_dir=file:~/Pictures
+action=4
+delay=1
+region=1
+show_mouse=1
+last_extension=png
+enable_imgur_upload=false
+show_border=1
