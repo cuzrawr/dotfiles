@@ -2,7 +2,7 @@
 # See fstab(5) for details.
 
 # <file system> <dir> <type> <options> <dump> <pass>
-UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> /        ext4   commit=30,lazytime,errors=remount-ro 0 1
+UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> /        ext4   commit=60,lazytime,errors=remount-ro 0 1
 #swap
 #UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
 #UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
