@@ -7,7 +7,7 @@ UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> /        ext4   commit=60,lazytime,error
 #UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
 #UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
 #defaults,noatime 0 1
-tmpfs                                     /tmp           tmpfs   defaults,size=4%,noatime,mode=1777 0 0
+tmpfs                                     /tmp           tmpfs   defaults,size=5%,noatime,mode=1777 0 0
 tmpfs                                     /var/log       tmpfs   defaults,size=1%,noexec,noatime,mode=1777 0 0
 
 #
@@ -32,3 +32,9 @@ tmpfs /home/<USEEEEEEER>/.config/chromium/GrShaderCache  tmpfs  noexec,noatime,n
 tmpfs /home/<USEEEEEEER>/.config/chromium/ShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
 tmpfs /home/<USEEEEEEER>/.config/chromium/Default/GPUCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
 tmpfs /home/<USEEEEEEER>/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+#
+# zswap ( /etc/udev/rules.d/99-zram.rules ) 
+
+/dev/zram0 none swap defaults 0 0
+/dev/zram1 none swap defaults 0 0
+
