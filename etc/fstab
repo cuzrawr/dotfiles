@@ -34,6 +34,8 @@ tmpfs /home/<USEEEEEEER>/.config/chromium/Default/GPUCache  tmpfs  noexec,noatim
 tmpfs /home/<USEEEEEEER>/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 #
 # zswap ( /etc/udev/rules.d/99-zram.rules ) 
+# swap.target should be NOT masked
+#
 
 /dev/zram0 none swap defaults 0 0
 /dev/zram1 none swap defaults 0 0
