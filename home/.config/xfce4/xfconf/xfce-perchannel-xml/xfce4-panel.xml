@@ -86,7 +86,7 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
-      <property name="digital-format" type="string" value="  %a %d %b, %R  "/>
+      <property name="digital-format" type="string" value="  %a %d %b, %R"/>
       <property name="mode" type="uint" value="2"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
