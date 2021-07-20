@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Allow users to override command-line options
+if [[ -f ~/.config/chromium-flags.conf ]]; then
+   CHROMIUM_USER_FLAGS="$(grep -v '^#' ~/.config/chromium-flags.conf)"
+fi
+
+# Detect Pepper Flash
+
+# Let the wrapped binary know that it has been run through the wrapper.
+export CHROME_WRAPPER="$(readlink -f $0)"
+export CHROME_DESKTOP="$0.desktop"
+
+# Google API keys: https://projects.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/chromium
+
+
+# Sanitize std{in,out,err} because they'll be shared with untrusted child
+# processes (http://crbug.com/376567).
+exec < /dev/null
+exec > >(exec cat)
+exec 2> >(exec cat >&2)
+
+
+
+
+# Launch
+exec /opt/chromium-snapshot/chrome $CHROMIUM_USER_FLAGS "$@" &
+sleep 15s && killall -9 crashpad_handler
