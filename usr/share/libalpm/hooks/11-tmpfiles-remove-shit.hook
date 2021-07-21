@@ -1,0 +1,10 @@
+[Trigger]
+Type = Path
+Operation = Install
+Operation = Upgrade
+Target = usr/lib/tmpfiles.d/*.conf
+
+[Action]
+Description = Remove tmpfiles.d shit...
+When = PostTransaction
+Exec = /bin/sh -c 'awk -i inplace "!/issue|fstab|crypttab|release|motd|host.conf|spool|\/srv\s|\/etc\/hosts|resolv.conf/" /usr/lib/tmpfiles.d/*'
