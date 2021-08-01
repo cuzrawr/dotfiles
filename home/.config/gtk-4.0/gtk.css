@@ -28,6 +28,17 @@ box-shadow: none;
 /*    color:black;       Font color. */
 }
 
+/* Chromium-specific case */
+.entry.chromium {
+        box-shadow: none;
+        border-radius:0px;
+}
+
+/* Chromium-specific case */
+entry.chromium {
+    box-shadow: none;
+    border-radius:0px;
+}
 
 /* github.com/jnsh/arc-theme/issues/83#issuecomment-701823965    */
 
