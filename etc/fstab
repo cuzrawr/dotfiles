@@ -5,8 +5,20 @@
 UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> /        ext4   commit=60,lazytime,errors=remount-ro 0 1
 #swap
 #UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
-#UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>> none swap defaults 0 0
-#defaults,noatime 0 1
+
+# as an general recomendation is drop fs-level discard and enable systemd fstrim.timer service:
+#  systemctl enable --now fstrim.timer
+#
+# examples:
+#
+UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>	/              ext4   data=writeback,noauto_da_alloc,nodiscard,nobh,barrier=0,lazytime,commit=120,errors=remount-ro 0 1
+UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
+
+
+#
+# tmp
+#
+
 tmpfs                                     /tmp           tmpfs   defaults,size=5%,noatime,mode=1777 0 0
 tmpfs                                     /var/log       tmpfs   defaults,size=1%,noexec,noatime,mode=1777 0 0
 
@@ -37,7 +49,7 @@ tmpfs /home/<USEEEEEEER>/.config/chromium/Default/optimization_guide_hint_cache_
 tmpfs /home/<USEEEEEEER>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
 
 #
-# zswap ( /etc/udev/rules.d/99-zram.rules ) 
+# zswap ( /etc/udev/rules.d/99-zram.rules )
 # swap.target should be NOT masked
 #
 
