@@ -17,6 +17,7 @@
 	"color_scheme": "Packages/Theme - Freesia/Triplet.tmTheme",
 	"contrasted_quick_panel": true,
 	"copy_with_empty_selection": false,
+	"dark_theme": "Freesia.sublime-theme",
 	"default_encoding": "UTF-8",
 	"detect_indentation": false,
 	"detect_slow_plugins": false,
@@ -52,7 +53,6 @@
 		"*.psb",
 		"*.sassc",
 		"*.scssc",
-		"*.svg",
 		"*.ttf",
 		"*.woff",
 		"*.xap",
@@ -102,7 +102,7 @@
 		"*.xlk",
 		"*.wbk",
 		"*.log",
-		"*log.txt",
+		"*.log.txt",
 		"*.err",
 		"*.tmp",
 		"*.temp",
@@ -134,18 +134,17 @@
 		"dist",
 		".bin"
 	],
+	"font_face": "Hack",
 	"font_options":
 	[
 		"gray_antialias"
 	],
-	//"font_face": "Fixedsys Excelsior",
-	"font_face": "Hack",
-	"font_size": 15,
+	"font_size": 14,
+	"hardware_acceleration": "opengl",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Package Control",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -153,6 +152,7 @@
 		"draw_normal",
 		"draw_active"
 	],
+	"light_theme": "Adaptive.sublime-theme",
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"margin": -5,
@@ -172,15 +172,18 @@
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "disabled",
 	"reveal-on-activate": true,
+	"popup_shadows": false,
 	"rulers":
 	[
 		80,
 		120
 	],
+	"file_tab_style": "square",
 	"scroll_past_end": true,
 	"scroll_speed": 0.0,
 	"shift_tab_unindent": true,
 	"show_encoding": true,
+	"show_line_endings": true,
 	"show_tab_close_buttons": false,
 	"spell_check": false,
 	"sublimelinter_delay": 1,
@@ -192,7 +195,4 @@
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?_",
 	"word_wrap": true,
 	"wrap_width": 120,
-	"hardware_acceleration": "opengl",
-	"dark_theme": "Freesia.sublime-theme",
-	"light_theme": "Adaptive.sublime-theme",
 }
