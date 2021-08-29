@@ -1,5 +1,5 @@
 ####
 
-	Currently this configs files require XanMod kernel.
+	Currently this configs require XanMod kernel.
 	
 	https://xanmod.org
