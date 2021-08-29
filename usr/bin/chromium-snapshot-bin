@@ -26,3 +26,4 @@ exec 2> >(exec cat >&2)
 # Launch
 exec /opt/chromium-snapshot/chrome $CHROMIUM_USER_FLAGS "$@" &
 sleep 15s && killall -9 crashpad_handler
+#until (pgrep crashpad); do sleep 5s && killall -9 crashpad_handler; done
