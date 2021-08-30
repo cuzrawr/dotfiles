@@ -4,11 +4,6 @@
 export HISTCONTROL=ignoredups
 export HISTSIZE=999999
 
-# aliases
-alias grep='grep --color '
-alias ls='ls -lFa '
-
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -27,3 +22,6 @@ case ${TERM} in
 esac
 
 [ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+
+
+. /etc/profile.d/00custom.sh

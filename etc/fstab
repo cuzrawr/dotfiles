@@ -48,7 +48,7 @@ tmpfs /home/<USEEEEEEER>/.config/chromium/Default/GPUCache  tmpfs  noexec,noatim
 tmpfs /home/<USEEEEEEER>/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
 # mesa trash
-tmpfs /home/<USEEEEEEER>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
+tmpfs /home/<USEEEEEEER>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
 
 #
 # zswap ( /etc/udev/rules.d/99-zram.rules )
