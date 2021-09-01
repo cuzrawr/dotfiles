@@ -139,7 +139,10 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 14,
+	"theme_font_options": [
+		"gray_antialias"
+	],
+	"font_size": 12,
 	"hardware_acceleration": "opengl",
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
