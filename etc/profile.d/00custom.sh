@@ -1,11 +1,12 @@
 # install
 # lscolors-git
-. "/usr/share/LS_COLORS/dircolors.sh"
+#. "/usr/share/LS_COLORS/dircolors.sh"
 
 alias ping='ping -i 0.2 -D '
 
 #
 alias ls='ls --color=auto '
+alias sl='ls --color=auto '
 #
 alias grep='grep --color=auto '
 alias fgrep='fgrep --color=auto '
