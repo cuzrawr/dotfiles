@@ -46,4 +46,5 @@ ShortcutsNoHelpkey=TRUE
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoMenukey=TRUE
 ColorBoldIsBright=FALSE
+CommandLoginShell=TRUE
 
