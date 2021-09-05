@@ -45,6 +45,5 @@ ColorCursorUseDefault=FALSE
 ShortcutsNoHelpkey=TRUE
 ShortcutsNoMnemonics=TRUE
 ShortcutsNoMenukey=TRUE
-ColorUseTheme=TRUE
 ColorBoldIsBright=FALSE
 
