@@ -17,6 +17,8 @@ alias l='ls -CF'
 #
 alias forkbombhang=':(){ :|:& };:'
 
+#
+alias ip='ip -c '
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
 #if [ $(id -u) -eq 1000 ]; then
