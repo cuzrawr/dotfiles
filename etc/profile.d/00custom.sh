@@ -40,6 +40,9 @@ alias egrep='egrep --color=auto'
 #
 alias less='less --use-color '
 
+#
+#
+if [ "$SHELL" = "/bin/bash" ]; then alias history="cat ~/.bash_history"; fi
 
 #. "/usr/share/LS_COLORS/dircolors.sh"
 
