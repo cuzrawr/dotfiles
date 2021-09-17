@@ -41,6 +41,8 @@ alias egrep='egrep --color=auto'
 alias less='less --use-color '
 
 #
+alias reboot='sync; echo 3 > /proc/sys/vm/drop_caches; sync; reboot'
+#
 #
 if [ "$SHELL" = "/bin/bash" ]; then alias history="cat ~/.bash_history"; fi
 
