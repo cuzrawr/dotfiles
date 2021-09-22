@@ -19,3 +19,7 @@ chattr +i ~/.config/xfce4/xfce4-screenshooter
 
 # my rsync variant to clone OS
 # rsync -aHAXvxr --progress /from/ /to/
+
+
+# set brightness
+pkexec /usr/bin/xfpm-power-backlight-helper --set-brightness 1
