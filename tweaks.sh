@@ -19,3 +19,6 @@ chattr +i ~/.config/xfce4/xfce4-screenshooter
 
 # my rsync variant to clone OS
 # rsync -aHAXvxr --progress /from/ /to/
+
+# fix random icons position each boot
+chattr +i ~/.config/xfce4/desktop
