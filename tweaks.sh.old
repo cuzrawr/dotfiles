@@ -20,5 +20,11 @@ chattr +i ~/.config/xfce4/xfce4-screenshooter
 # my rsync variant to clone OS
 # rsync -aHAXvxr --progress /from/ /to/
 
+<<<<<<< HEAD
 # fix random icons position each boot
 chattr +i ~/.config/xfce4/desktop
+=======
+
+# set brightness
+pkexec /usr/bin/xfpm-power-backlight-helper --set-brightness 1
+>>>>>>> b3f4b47de45afd17acb9261c0fc9a949b7772b8a
