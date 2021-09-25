@@ -45,6 +45,7 @@ alias less='less --use-color '
 
 #
 alias reboot='sync; echo 3 > /proc/sys/vm/drop_caches; sync; reboot'
+alias poweroff='sync; echo 3 > /proc/sys/vm/drop_caches; sync; poweroff'
 #
 #
 if [ "$SHELL" = "/bin/bash" ]; then alias history="cat ~/.bash_history"; fi
