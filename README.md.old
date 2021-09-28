@@ -76,6 +76,11 @@ Sec-GPC
 cache-control
 
 ```
+#### test
+```
+[{"alwaysOn":true,"appendMode":false,"backgroundColor":"#506225","filters":[],"headers":[{"comment":"","enabled":true,"name":"Accept","value":"*/*"},{"comment":"","enabled":true,"name":"User-Agent","value":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"},{"comment":"","enabled":true,"name":"Accept-Language","value":""},{"comment":"","enabled":true,"name":"Accept-Encoding","value":""},{"comment":"","enabled":true,"name":"Upgrade-Insecure-Requests","value":""},{"comment":"","enabled":true,"name":"Sec-Fetch-Site","value":""},{"comment":"","enabled":true,"name":"Sec-Fetch-Mode","value":""},{"comment":"","enabled":true,"name":"Sec-Fetch-User","value":""},{"comment":"","enabled":true,"name":"Sec-Fetch-Dest","value":""},{"comment":"","enabled":true,"name":"Cache-Control","value":""},{"comment":"","enabled":true,"name":"DNT","value":""},{"comment":"","enabled":true,"name":"dnt","value":""},{"comment":"","enabled":true,"name":"Connection","value":""},{"comment":"","enabled":true,"name":"Sec-GPC","value":""},{"comment":"","enabled":true,"name":"cache-control","value":""}],"hideComment":true,"respHeaders":[],"shortTitle":"1","textColor":"#ffffff","title":"Profile 1","urlReplacements":[]}]
+```
+### testeof
 
 how it should looks like:
 

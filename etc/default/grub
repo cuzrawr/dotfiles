@@ -4,14 +4,22 @@ GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR='Lenoux'
 
 # for tests only
-GRUB_CMDLINE_LINUX_DEFAULT="initcall_blacklist=8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc logo.nologo audit=0 psmouse.synaptics_intertouch=1 nowatchdog apparmor=0 scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 vt.global_cursor_default=1 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 loglevel=2   memory_corruption_check=0  memory_corruption_check_period=0  mem_encrypt=off  pnp.debug=0  selinux=0 mitigations=off"
+#  vt.global_cursor_default=0 - disable cursor
+# usbcore.autosuspend=-1  pci=noaer loglevel=3 acpi_enforce_resources=lax processor.nocst=1 libata.noacpi=1 nvidia-drm.modeset=1 energy_perf_bias=performance - desktop
+# psmouse.synaptics_intertouch=1 - notebook
+GRUB_CMDLINE_LINUX_DEFAULT=" initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 rootfs=ext4,btrfs,xfs,f2fs tsc=reliable logo.nologo scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog apparmor=0 mem_encrypt=off pnp.debug=0 selinux=0 mitigations=off"
+
+# for tests only
+#GRUB_CMDLINE_LINUX_DEFAULT=" audit=0 nowatchdog apparmor=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 mem_encrypt=off pnp.debug=0 selinux=0 vt.global_cursor_default=0 mitigations=off "
+#GRUB_CMDLINE_LINUX_DEFAULT=" libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 rootfs=ext4,btrfs,xfs,f2fs tsc=reliable  vga=845 energy_perf_bias=performance usbcore.autosuspend=-1 pci=noaer loglevel=3 acpi_enforce_resources=lax processor.nocst=1 libata.noacpi=1 nvidia-drm.modeset=1 initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc logo.nologo audit=0 nowatchdog apparmor=0 scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 vt.global_cursor_default=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0  memory_corruption_check_period=0  mem_encrypt=off  pnp.debug=0  selinux=0 mitigations=off"
+#GRUB_CMDLINE_LINUX_DEFAULT="nowatchdog  pci=noaer loglevel=2"
 # ipv6.disable=1
 #intel_iommu=on,igfx_off 
 # mitigations=off"
 #GRUB_CMDLINE_LINUX="psmouse.synaptics_intertouch=1 nowatchdog apparmor=1 security=apparmor udev.log_priority=3 elevator=none loglevel=3 mitigations=off"
 # i915.fastboot=1"
 #GRUB_CMDLINE_LINUX=""
-
+# for tests only
 # If you want to enable the save default function, uncomment the following
 # line, and set GRUB_DEFAULT to saved.
 GRUB_SAVEDEFAULT=true
@@ -21,7 +29,6 @@ GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 
 # Uncomment to enable booting from LUKS encrypted devices
 #GRUB_ENABLE_CRYPTODISK=y
-
 
 
 
