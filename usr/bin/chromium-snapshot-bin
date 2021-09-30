@@ -6,12 +6,24 @@ if [[ -f ~/.config/chromium-flags.conf ]]; then
 fi
 
 # Detect Pepper Flash
+#
+#
+#
 
 # Let the wrapped binary know that it has been run through the wrapper.
 export CHROME_WRAPPER="$(readlink -f $0)"
 export CHROME_DESKTOP="$0.desktop"
 
 # Google API keys: https://projects.archlinux.org/svntogit/packages.git/tree/trunk/PKGBUILD?h=packages/chromium
+#
+#
+#
+
+export CHROME_VERSION_EXTRA="unstable"
+
+# We don't want bug-buddy intercepting our crashes. http://crbug.com/24120
+export GNOME_DISABLE_CRASH_DIALOG=SET_BY_GOOGLE_CHROME
+
 
 
 # Sanitize std{in,out,err} because they'll be shared with untrusted child
@@ -20,10 +32,7 @@ exec < /dev/null
 exec > >(exec cat)
 exec 2> >(exec cat >&2)
 
-
-
-
 # Launch
 exec /opt/chromium-snapshot/chrome $CHROMIUM_USER_FLAGS "$@" &
-sleep 15s && killall -9 crashpad_handler
+sleep 42s && killall -9 crashpad_handler && killall -9 crashpad_handler
 #until (pgrep crashpad); do sleep 5s && killall -9 crashpad_handler; done
