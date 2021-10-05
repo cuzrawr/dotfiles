@@ -44,3 +44,17 @@ yay -S --mflags --skipinteg librewolf-bin
 
 #
 #
+
+
+#
+# Arch clean tips
+#
+
+
+rm /var/lib/pacman/db.lck
+pacman -Sc
+
+#
+echo "Run this to remove unused packages"
+echo 'pacman -R $(pacman -Qtdq)'
+
