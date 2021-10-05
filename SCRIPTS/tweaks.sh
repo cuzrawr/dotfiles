@@ -58,3 +58,14 @@ pacman -Sc
 echo "Run this to remove unused packages"
 echo 'pacman -R $(pacman -Qtdq)'
 
+
+#
+# disable & mask systemd services
+#
+systemctl disable lvm2-lvmpolld.socket
+systemctl disable systemd-coredump.socket
+systemctl mask systemd-coredump.socket
+systemctl mask lvm2-lvmpolld.socket
+
+systemctl disable cryptsetup.target
+systemctl mask cryptsetup.target
