@@ -1,15 +1,85 @@
 // Use with ~/.config/chromium-flags.conf
 {
+  //
+  // 1 = Allow any site to run JavaScript JIT
+  // 2 = Do not allow any site to run JavaScript JIT
+  // ( 2 mean slow but more secure )
+  "DefaultJavaScriptJitSetting": 2,
+  //
+  // Disable internal PDF reader:
+  "AlwaysOpenPdfExternally": true,
+  //
+  //  The input string should be a valid hex color string matching the format "#RRGGBB".
+  //"BrowserThemeColor": "#1E2023",
+  //
+  // This can break web. check CrossOrigin
+  "CrossOriginWebAssemblyModuleSharingEnabled": false,
+  //
+  //
+  // do not check default browser app at startup
+  "DefaultBrowserSettingEnabled": false,
+  // specifies the character encodings supported by the search provider.
+  // Leaving DefaultSearchProviderEncodings unset puts UTF-8 in use.
+  // They're tried in the order provided.
+  "DefaultSearchProviderEncodings": [
+     "UTF-8",
+     "UTF-16",
+     "GB2312",
+     "ISO-8859-1"
+    ],
+  //
   //32mb disk cache
   "DiskCacheSize": 32000000,
   "DiskCacheDir": "/tmp",
   // disable printing
   "PrintingEnabled": false,
-  "PrintingEnabled": false,
+  "DisablePrintPreview": true,
+  // Disable AutoFill (storing history prohibited anyway)
+  "AutoFillEnabled": false,
+  // This policy controls the visibility of cards on the New Tab Page
+  "NTPCardsVisible": false,
+  //
+  // Hide the Home button from the toolbar
+  "ShowHomeButton": false,
+  // always show full url in address bar
+  "ShowFullUrlsInAddressBar": true,
+  //
+  // 2 = Do not allow any site to track the users' physical location
+  "DefaultGeolocationSetting": 2,
+  //
   // disable dns intercept checks
   // comment if you use proxy
-  //"DNSInterceptionChecksEnabled": false,
-
+  "DNSInterceptionChecksEnabled": false,
+  //
+  // no effect
+  //"WPADQuickCheckEnabled": true,
+  //
+  // WebRTC will only use the interface connecting to the public Internet, and will not connect using private IP addresses.
+  "WebRtcIPHandling": "default_public_interface_only",
+  //
+  // Hide the Chrome Web Store app and footer link from the New Tab Page and Google Chrome OS app launcher.
+  "HideWebStoreIcon": true,
+  //
+  //  Prevent sites from using SharedArrayBuffers
+  // https://developer.chrome.com/blog/enabling-shared-array-buffer/
+  "SharedArrayBufferUnrestrictedAccessAllowed": false,
+  //
+  // This can be beneficial to reduce the size of the roaming profile or limit the type of data uploaded to the Chrome Sync Servers.
+  // Those names are case sensitive!
+  "SyncTypesListDisabled":[
+     "bookmarks", 
+     "readingList", 
+     "preferences", 
+     "passwords", 
+     "autofill", 
+     "themes", 
+     "typedUrls", 
+     "extensions", 
+     "apps", 
+     "tabs", 
+     "wifiConfigurations"
+    ],
+  //
   // remove browser history on exit
   "ClearBrowsingDataOnExitList": [
   "browsing_history",
@@ -21,6 +91,21 @@
   "site_settings",
   "hosted_app_data"
 ],
+    // https://chromeenterprise.google/policies/?policy=BrowsingDataLifetime
+  "BrowsingDataLifetime": [
+     {
+      "time_to_live_in_hours": 24,
+      "data_types": [
+       "cached_images_and_files"
+      ]
+     },
+     {
+      "time_to_live_in_hours": 6,
+      "data_types": [
+       "hosted_app_data"
+      ]
+     }
+    ],
 
   // show warn when use http on https sites
   "InsecureFormsWarningsEnabled": false,
@@ -30,13 +115,37 @@
   "SharedClipboardEnabled": false,
   // disable report linux apps to google
   //"ReportCrostiniUsageEnabled": false,
-
-
   // incrase reporting cycle time to max
-
   //"":,
   // validate at chrome://policy/
   "UrlKeyedAnonymizedDataCollectionEnabled": false,
+  // Do not allow ads on sites with intrusive ads
+  "AdsSettingForIntrusiveAdsSites": 2,
+  // Do not use Google services to provide automatic image descriptions
+  "AccessibilityImageLabelsEnabled": false,
+  // Do not allow queries to Google servers to retrieve timestamps
+  "BrowserNetworkTimeQueriesEnabled": false,
+  // If this policy is set to disabled, the capability of sending phone numbers to Android devices will be disabled for the Chrome user.
+  "ClickToCallEnabled": false,
+  // This policy controls Google Chrome extension installation requests which allows users to send the requests to the Google Admin console for approval.
+  //"CloudExtensionRequestEnabled": false,
+  // Setting the policy to Disabled or leaving it unset means platform policy takes precedence if it conflicts with cloud policy.
+  "CloudPolicyOverridesPlatformPolicy": false,
+  // Setting the policy to Disabled means users can't print to Google Cloud Print from the Google Chrome print dialog.
+  "CloudPrintSubmitEnabled": false,
+  //"CloudReportingEnabled": false,
+  // 2 = Do not allow any site to request access to Bluetooth devices via the Web Bluetooth API
+  "DefaultWebBluetoothGuardSetting": 2,
+  // 2 = Do not allow any site to request access to USB devices via the WebUSB API
+  "DefaultWebUsbGuardSetting": 2,
+  // 2 = Do not allow any site to access sensors
+  "DefaultSensorsSetting": 2,
+  // Setting the policy to False removes the sharing icon from the omnibox and the entry from the 3-dot menu.
+  "DesktopSharingHubEnabled": false,
+  //
+  // Setting the policy to Enabled or leaving it unset lets users send feedback to Google through Menu > Help > Report an Issue or key combination.
+  "UserFeedbackAllowed": false,
+  "LensRegionSearchEnabled": false,
   "WebRtcEventLogCollectionAllowed": false,
   "BackgroundModeEnabled": false,
   "SyncDisabled": true,
@@ -69,6 +178,11 @@
   "CloudPrintProxyEnabled": false,
   "Disable3DAPIs": true,
   "SyncDisabled": true,
+  // list of extensions that should be automatically open when downloaded
+  "AutoOpenFileTypes": [
+      "md",
+      "txt"
+  ],
   //"CookiesSessionOnlyForUrls": [ "none" ],
   //
   // https://support.google.com/chrome/a/answer/7517525
@@ -82,8 +196,18 @@
    		// full perm list (Review permissions)
    		// https://support.google.com/chrome/a/answer/7515036
    		// https://chromeenterprise.google/policies/?policy=ExtensionSettings
+   		// also: https://support.google.com/chrome/a/answer/9867568?hl=en
+   		// and: https://developer.chrome.com/docs/extensions/mv3/declare_permissions
     "blocked_permissions": ["usb", "idle", "clipboardRead", "audioCapture", "videoCapture", "power", "serial", "tts"]
   }
+/*   "nomnklagbgmgghhjidfhnoelnjfndfpd": {
+   		// full perm list (Review permissions)
+   		// https://support.google.com/chrome/a/answer/7515036
+   		// https://chromeenterprise.google/policies/?policy=ExtensionSettings
+    "blocked_permissions": []
+  },
+*/
+
     /*    "pkehgijcmpdhfbdbbnkijodmdjhbjlgp": {
              "installation_mode": "force_installed",
              "update_url": "https://clients2.google.com/service/update2/crx"
