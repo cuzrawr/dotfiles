@@ -4,7 +4,7 @@
   // 1 = Allow any site to run JavaScript JIT
   // 2 = Do not allow any site to run JavaScript JIT
   // ( 2 mean slow but more secure )
-  "DefaultJavaScriptJitSetting": 2,
+//  "DefaultJavaScriptJitSetting": 2,
   //
   // Disable internal PDF reader:
   "AlwaysOpenPdfExternally": true,
@@ -91,6 +91,7 @@
   "site_settings",
   "hosted_app_data"
 ],
+     // WARNING next feature require  "#enable-browsing-data-lifetime-manager" set enabled in chrome://flags
     // https://chromeenterprise.google/policies/?policy=BrowsingDataLifetime
   "BrowsingDataLifetime": [
      {
@@ -108,7 +109,7 @@
     ],
 
   // show warn when use http on https sites
-  "InsecureFormsWarningsEnabled": false,
+  "InsecureFormsWarningsEnabled": true,
   // disable screen share
   // through getDisplayMedia() or Desktop Capture API
   "ScreenCaptureAllowed": false,
