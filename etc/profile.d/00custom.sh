@@ -4,6 +4,12 @@
 
 alias ping='ping -i 0.2 -D '
 
+
+# passwords
+alias pwgnweak='openssl rand -base64 1024'
+alias pwgnstrong='tr -dc "_A-Z-a-z-0-9!@#$%"</dev/urandom|head -c1024|fold -w 64'
+
+
 #
 alias ls='ls --color=auto '
 #
