@@ -28,3 +28,12 @@ MOZ_CRASHREPORTER_DATA_DIRECTORY="/dev/null"
 
 # intel VA-API
 LIBVA_DRIVER_NAME=iHD
+#
+#
+# cinnamon
+MUFFIN_NO_SHADOWS=1
+#
+# default editors
+EDITOR=nano
+VISUAL=nano
+
