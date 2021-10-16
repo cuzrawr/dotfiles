@@ -6,9 +6,22 @@ alias ping='ping -i 0.2 -D '
 
 
 # passwords
-alias pwgnweak='openssl rand -base64 1024'
-alias pwgnstrong='tr -dc "_A-Z-a-z-0-9!@#$%"</dev/urandom|head -c1024|fold -w 64'
 
+function pwgen {
+  if [ -z "$1" ]; then
+    echo "Usage: pwgen <weak|strong|lmao>"
+  else
+
+      case $1 in
+        *weak)      openssl rand -base64 1024    ;;
+        *strong)    tr -dc '_A-Z-a-z-0-9!@#$%'</dev/urandom|head -c1024|fold -w 64 && echo ;;
+        *lmao)      date +%s | sha512sum | base32 | head -c 1024 && echo   ;;
+        *)           echo "pwgen: '$1' - unknown pwgen method" ;;
+      esac
+  fi
+}
+
+alias randomip='printf "%d.%d.%d.%d\n" "$((RANDOM % 255))" "$((RANDOM % 255))" "$((RANDOM % 255))" "$((RANDOM % 255))"'
 
 #
 alias ls='ls --color=auto '
