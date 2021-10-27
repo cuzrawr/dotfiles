@@ -18,7 +18,7 @@ chattr +i ~/.config/xfce4/xfce4-screenshooter
 # f2fs hot list
 #
 # -E "db,rng,pyi,h,save,dic,lck,lock,bin,cc,c,cpp,h,a,o,asm,deps,pl,rb,am,key,dat,conf,cnf,rc,xrdb,gpg,mime,yml,yaml,ssh,dirs,tmp,so"
-# as an example: 
+# as an example:
 # mkfs.f2fs -f -E "db,rng,pyi,h,save,dic,lck,lock,bin,cc,c,cpp,h,a,o,asm,deps,pl,rb,am,key,dat,conf,cnf,rc,xrdb,gpg,mime,yml,yaml,ssh,dirs,tmp,so" -l LABEL /dev/sdXX
 
 #
@@ -95,11 +95,13 @@ docker rmi $(docker images -q) -f
 
 ## (see /etc/fstab)
 #  this folders should be cleaned:
-# /root/.ssr
-# /root/.local
-# /root/.ssh
-# /root/.pki
-# /root/.run
-# /root/.gnupg
-# /root/.cache
+# rm -Rf /root/.ssr
+# rm -Rf /root/.local
+# rm -Rf /root/.ssh
+# rm -Rf /root/.pki
+# rm -Rf /root/.run
+# rm -Rf /root/.gnupg
+# rm -Rf /root/.cache
+# mv /root/.config /root/.config_old
 ##  (see /etc/fstab)
+
