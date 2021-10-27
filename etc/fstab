@@ -25,8 +25,11 @@ tmpfs                                     /tmp           tmpfs   defaults,size=5
 tmpfs                                     /var/log       tmpfs   defaults,size=1%,noexec,noatime,mode=1777 0 0
 
 #
-tmpfs /var/run tmpfs defaults,rw,nosuid,mode=0755 0 0
-tmpfs /var/lock tmpfs defaults,rw,noexec,nosuid,nodev,mode=1777 0 0
+#tmpfs /var/run tmpfs defaults,rw,nosuid,mode=0755 0 0
+#tmpfs /var/lock tmpfs defaults,rw,noexec,nosuid,nodev,mode=1777 0 0
+#
+#
+#
 none /dev/shm tmpfs defaults,nosuid,noexec,rw 0 0
 
 #
@@ -70,4 +73,15 @@ tmpfs /root/.config tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.run    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.gnupg  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.cache  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+
+
+
+#
+# /run in tmpfs
+# https://manpages.debian.org/testing/initscripts/tmpfs.5.en.html
+#
+tmpfs   /run    tmpfs   nodev,nosuid,size=5%,mode=755   0       0
+tmpfs   /run/lock    tmpfs   noexec,nodev,nosuid,size=1%,mode=755   0       0
+
+
 
