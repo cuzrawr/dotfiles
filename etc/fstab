@@ -85,3 +85,9 @@ tmpfs   /run/lock    tmpfs   noexec,nodev,nosuid,size=1%,mode=755   0       0
 
 
 
+# 
+# nvidia
+#
+tmpfs /home/host/.nv  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+
+
