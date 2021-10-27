@@ -58,3 +58,15 @@ tmpfs /home/<USEEEEEEER>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mo
 /dev/zram0 none swap defaults 0 0
 #/dev/zram1 none swap defaults 0 0
 
+
+#
+# root trash
+#
+tmpfs /root/.ssr    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.local  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.ssh    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.pki    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.config tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.run    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.gnupg  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+

@@ -93,3 +93,11 @@ docker rmi $(docker images -q) -f
 ##
 ##
 
+## this folders should be cleaned:
+# /root/.ssr
+# /root/.local
+# /root/.ssh
+# /root/.pki
+# /root/.run
+# /root/.gnupg
+#  (see fstab)
