@@ -69,4 +69,5 @@ tmpfs /root/.pki    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.config tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.run    tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 tmpfs /root/.gnupg  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /root/.cache  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
