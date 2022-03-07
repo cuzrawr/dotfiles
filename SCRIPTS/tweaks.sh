@@ -104,4 +104,12 @@ docker rmi $(docker images -q) -f
 # rm -Rf /root/.cache
 # mv /root/.config /root/.config_old
 ##  (see /etc/fstab)
+#
+# screnlock
+#
+# install screen locker
+pacman -S i3lock
+# and setup in user session
+xfconf-query --create -c xfce4-session -p /general/LockCommand -t string -s "i3lock -c 223344 -i /etc/lxdm/background.png -e -p win"
 
+# "/usr/bin/xflock4" is a script.
