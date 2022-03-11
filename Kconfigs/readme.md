@@ -6,3 +6,4 @@
 
 ####
 	Intel only!
+        Thinkpad Hard Drive Active Protection System (hdaps)    - disabled
