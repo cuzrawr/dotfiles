@@ -1,0 +1,2 @@
+# added drift_time=25  - many thanks to that random reddit guy. that fixed my pain.
+SUBSYSTEM=="serio", DRIVERS=="psmouse", ACTION=="change", ENV{SERIO_TYPE}=="05", ATTR{device/drift_time}="25", ATTR{press_to_select}="0", ATTR{sensitivity}="175", ATTR{speed}="128", ATTR{inertia}="4"
