@@ -18,11 +18,11 @@ exec tail -n +3 $0
 
 menuentry "Wifislax64 ISO" --class gnu-linux --class os {
     echo "Please wait..."
-    set isofile="/mnt/wifislax64-2.2dev21092020.iso"
+    set isofile="/mnt/wifislax64-2.4-final.iso"
     export isofile
     search --set=root --file $isofile
     loopback loop $isofile
-    linux (loop)/boot/vmlinuz livemedia=/dev/sda5:$isofile kbd=us locale=en_US.utf8  rw iso-scan/filename=$isofile
+    linux (loop)/boot/vmlinuz livemedia=/dev/sda5:$isofile kbd=us locale=en_US.utf8  rw iso-scan/filename=$isofile load_ramdisk=1 prompt_ramdisk=0 printk.time=0
     initrd (loop)/boot/initrd.xz
 }
 

@@ -12,8 +12,27 @@ GRUB_DISTRIBUTOR='Lenoux'
 #
 #
 # adding ipv6.disable_ipv6=1 will keep the IPv6 stack functional but will not assign IPv6 addresses to any of your network devices.
+# tsx=on tsx_async_abort=off - max perf unsecure, checkthis
 
-GRUB_CMDLINE_LINUX_DEFAULT=" ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 rootfs=ext4,btrfs,xfs,f2fs tsc=reliable logo.nologo scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog apparmor=0 mem_encrypt=off pnp.debug=0 selinux=0 mitigations=off"
+# test ths:
+# acpi_osi=Linux acpi_backlight=vendor
+
+
+#
+# ahci.mobile_lpm_policy=1 fixes a hang on several Lenovo laptops and some Acer notebooks due to problematic SATA controller power management. 
+# That workaround is strictly not related to Intel graphics but it does solve related issues. 
+# Adding this kernel parameter will also solve hangs when you change display brightness on certain Lenovo machines.
+# ahci.mobile_lpm_policy=1
+
+#
+# offset of swapfile: filefrag -v /swapfile | awk '$1=="0:" {print substr($4, 1, length($4)-2)}'
+#
+
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=<<<<<<UUID_CONTAINE_SWAP_FILE>>>>>>> resume_offset=<<<<<<<<<<<OFFSET_OF_SWAPFILE>>>>>>>  ahci.mobile_lpm_policy=1 tsx=on tsx_async_abort=off intel_iommu=off,igfx_off mds=full drm.debug=0 ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 module_blacklist=kvmgt,snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 rootfs=ext4,btrfs,xfs,f2fs tsc=reliable logo.nologo scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog mem_encrypt=off pnp.debug=0"
+#GRUB_CMDLINE_LINUX_DEFAULT=""
+#GRUB_CMDLINE_LINUX_DEFAULT=" loglevel=2"
+#custom microcode https://aur.archlinux.org/packages/intel-ucode-clear
+GRUB_EARLY_INITRD_LINUX_CUSTOM="intel-ucode.cpio i915-firmware.cpio.xz "
 
 # for tests only
 #GRUB_CMDLINE_LINUX_DEFAULT=" audit=0 nowatchdog apparmor=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 mem_encrypt=off pnp.debug=0 selinux=0 vt.global_cursor_default=0 mitigations=off "
