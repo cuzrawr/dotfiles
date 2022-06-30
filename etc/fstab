@@ -20,6 +20,10 @@ UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>  /              ext4   data=writeback,no
 UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
 # UEFI partition
 UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>                                  /boot/EFI      vfat   umask=0077 0 2
+# experimental /proc ( hide pids for other users, require   /etc/systemd/system/systemd-logind.service.d/hidepid.conf )
+proc	/proc	proc	nosuid,nodev,noexec,hidepid=2,gid=proc	0	0
+
+
 
 #                        
 #	 _____ _ _ _ _____ _____ 
