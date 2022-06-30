@@ -5,11 +5,12 @@
 #
 # Test lazytime
 #
-tune2fs -l
-# #tune2fs -E mount_opts="lazytime" /dev/sdXX
-debugfs -w -R "set_super_value mount_opts data=writeback,lazytime" /dev/sda5
+#tune2fs -l
+# --fixme kernel: EXT4-fs (sda5): failed to parse options in superblock: data
 
-tune2fs -l
+# #tune2fs -E mount_opts="lazytime" /dev/sdXX
+# debugfs -w -R "set_super_value mount_opts data=writeback,lazytime" /dev/sda5
+
 
 #
 # check
