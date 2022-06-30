@@ -116,3 +116,9 @@ pacman -S i3lock
 xfconf-query --create -c xfce4-session -p /general/LockCommand -t string -s "i3lock -c 223344 -i /etc/lxdm/background.png -e -p win"
 
 # "/usr/bin/xflock4" is a script.
+
+
+
+# security
+
+# https://wiki.archlinux.org/title/security

@@ -5,7 +5,7 @@
 #
 QT_QPA_PLATFORMTHEME="qt5ct"
 QT_STYLE_OVERRIDE=kvantum
-GTK_THEME="Arc-Dark:dark"
+GTK_THEME="Arc-Dark"
 NO_AT_BRIDGE=1
 
 # firefox trash
@@ -20,20 +20,27 @@ MOZ_CRASHREPORTER_DATA_DIRECTORY="/dev/null"
 #
 
 
-#LIBVA_DRIVER_NAME=i965
+LIBVA_DRIVER_NAME=i965
 #QT_QPA_PLATFORMTHEME=qt5ct
 
 # intel VDPAU
-#VDPAU_DRIVER=va_gl
+VDPAU_DRIVER=va_gl
 
 # intel VA-API
-LIBVA_DRIVER_NAME=iHD
+#LIBVA_DRIVER_NAME=iHD
 #
 #
 # cinnamon
 MUFFIN_NO_SHADOWS=1
 #
-# default editors
-EDITOR=nano
-VISUAL=nano
+# default editors ( rnano - launching secure nano )
+EDITOR=rnano
+VISUAL=rnano
 
+GTK_CSD=1
+
+
+# As of Mesa 19.2, a new OpenGL driver, Iris, is available for testing. 
+# In Mesa 20.0, the Iris driver is promoted to be the default for Gen8+.
+# Certain applications run faster with it. 
+#MESA_LOADER_DRIVER_OVERRIDE=iris
