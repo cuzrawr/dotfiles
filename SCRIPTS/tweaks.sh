@@ -6,7 +6,9 @@
 # Test lazytime
 #
 tune2fs -l
-tune2fs -E mount_opts="lazytime" /dev/sdXX
+# #tune2fs -E mount_opts="lazytime" /dev/sdXX
+debugfs -w -R "set_super_value mount_opts data=writeback,lazytime" /dev/sda5
+
 tune2fs -l
 
 #
