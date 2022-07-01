@@ -15,13 +15,14 @@
 #  systemctl enable --now fstrim.timer
 
 # System
-UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>  /              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 1                
+UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473	/              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 1                
 # home
-UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
+UUID=2f6b991f-ef9e-46ad-bb38-87bb71c2285b       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
 # UEFI partition
-UUID=<<UUUUUUUUUUUUUUUUIIIIIIIIDDDDDD>>                                  /boot/EFI      vfat   umask=0077 0 2
-# experimental /proc ( hide pids for other users, require   /etc/systemd/system/systemd-logind.service.d/hidepid.conf )
-proc	/proc	proc	nosuid,nodev,noexec,hidepid=2,gid=proc	0	0
+UUID=B14D-138A                                  /boot/EFI      vfat   umask=0077 0 2
+# experimental /proc
+# that item break automatic mounts in Thunar:
+#proc	 /proc  	proc	  nosuid,nodev,noexec,hidepid=2,gid=proc  	0	  0
 
 
 
@@ -63,21 +64,21 @@ none /dev/shm tmpfs defaults,nosuid,noexec,rw 0 0
 #
 
 # Mozilla shit
-tmpfs /home/<USEEEEEEER>/.cache/mozilla tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.cache/mozilla tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
 # Chromium shit
-tmpfs /home/<USEEEEEEER>/.cache/chromium tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.cache/chromium tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 #
-tmpfs /home/<USEEEEEEER>/.config/chromium/Default/Service\040Worker tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.config/chromium/Default/Service\040Worker tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 #
-tmpfs /home/<USEEEEEEER>/.config/chromium/Crash\040Reports  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
-tmpfs /home/<USEEEEEEER>/.config/chromium/GrShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
-tmpfs /home/<USEEEEEEER>/.config/chromium/ShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
-tmpfs /home/<USEEEEEEER>/.config/chromium/Default/GPUCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
-tmpfs /home/<USEEEEEEER>/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.config/chromium/Crash\040Reports  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.config/chromium/GrShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/host/.config/chromium/ShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
+tmpfs /home/host/.config/chromium/Default/GPUCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
+tmpfs /home/host/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
 # mesa trash
-tmpfs /home/<USEEEEEEER>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
+tmpfs /home/host/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
 
 # root trash
 #
@@ -98,5 +99,5 @@ tmpfs   /run/lock    tmpfs   noexec,nosuid,nodev,mode=1777      0 0
 
 # nvidia
 #
-#tmpfs /home/<USEEEEEEER>/.nv  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+#tmpfs /home/host/.nv  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
