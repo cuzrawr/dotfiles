@@ -123,3 +123,9 @@ xfconf-query --create -c xfce4-session -p /general/LockCommand -t string -s "i3l
 # security
 
 # https://wiki.archlinux.org/title/security
+
+
+
+# Archlinux mirrorlist sort example with reflector software
+reflector --ipv4 --country 'France,Germany,Ukraine,Moldova,Slovakia,Belarus,Poland,Hungary,Romania,Bulgaria,Georgia' --fastest 10 --verbose --save /tmp/mirrorlist.txt
+
