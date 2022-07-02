@@ -1,1 +1,1 @@
-SUBSYSTEM=="serio", DRIVERS=="psmouse", ACTION=="change", ENV{SERIO_TYPE}=="05", ATTR{device/drift_time}="5", ATTR{press_to_select}="0", ATTR{sensitivity}="200", ATTR{speed}="97", ATTR{inertia}="6"
+SUBSYSTEM=="serio", DRIVERS=="psmouse", ACTION=="change", ENV{SERIO_TYPE}=="05", ATTR{device/drift_time}="25", ATTR{press_to_select}="0", ATTR{sensitivity}="175", ATTR{speed}="128", ATTR{inertia}="4"
