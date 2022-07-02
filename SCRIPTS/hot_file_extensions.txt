@@ -1,6 +1,8 @@
 #
 # That example file extensions, can be used in f2fs
 #
+# f2fs hot list:
+# -E "db,rng,pyi,h,save,dic,lck,lock,bin,cc,c,cpp,h,a,o,asm,deps,pl,rb,am,key,dat,conf,cnf,rc,xrdb,gpg,mime,yml,yaml,ssh,dirs,tmp,so"
 
 .png
 .sh

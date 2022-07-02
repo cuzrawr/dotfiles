@@ -19,6 +19,7 @@ chattr +i ~/.config/xfce4/xfce4-screenshooter
 
 #
 # f2fs hot list
+#  Extended extensions list here:  SCRIPTS/hot_file_extensions.txt
 #
 # -E "db,rng,pyi,h,save,dic,lck,lock,bin,cc,c,cpp,h,a,o,asm,deps,pl,rb,am,key,dat,conf,cnf,rc,xrdb,gpg,mime,yml,yaml,ssh,dirs,tmp,so"
 # as an example:
