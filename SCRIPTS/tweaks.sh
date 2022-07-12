@@ -3,6 +3,11 @@
 #
 
 #
+# Polkit automont:
+# should check are the same with user groups in /etc/polkit-1/rules.d/49-nopasswd_limited.rules
+
+
+#
 # Test lazytime
 #
 #tune2fs -l
