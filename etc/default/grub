@@ -32,7 +32,11 @@ GRUB_DISTRIBUTOR='Lenoux'
 # integrity: kernel features that allow userland to modify the running kernel are disabled (kexec, bpf).
 # confidentiality: kernel features that allow userland to extract confidential information from the kernel are also disabled.
 
-GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473 resume_offset=4562944 ahci.mobile_lpm_policy=1 tsx=on tsx_async_abort=off intel_iommu=off,igfx_off mds=full drm.debug=0 ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 module_blacklist=kvmgt,snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable logo.nologo scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog mem_encrypt=off pnp.debug=0"
+# scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 - disabled
+# If you use the base mkinitcpio hook, you can force fsck at boot time by passing fsck.mode=force as a kernel parameter. This will check every file system you have on the machine.
+
+
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473 resume_offset=4562944 fsck.mode=force ahci.mobile_lpm_policy=1 tsx=on tsx_async_abort=off intel_iommu=off,igfx_off mds=full drm.debug=0 ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 module_blacklist=kvmgt,snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc initcall_blacklist=snd_hda_codec_hdmi,8250,8250_base,8250_pci,max310x,sccnxp,serial_mctrl_gpio,kgdboc libata.force=noncqtrim lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable logo.nologo rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog mem_encrypt=off pnp.debug=0"
 #GRUB_CMDLINE_LINUX_DEFAULT=""
 #GRUB_CMDLINE_LINUX_DEFAULT=" loglevel=2"
 #custom microcode https://aur.archlinux.org/packages/intel-ucode-clear
