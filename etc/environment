@@ -4,7 +4,9 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 QT_QPA_PLATFORMTHEME="qt5ct"
-QT_STYLE_OVERRIDE=kvantum
+# disabeled for qt5ct
+#QT_STYLE_OVERRIDE=kvantum
+
 GTK_THEME="Arc-Dark"
 NO_AT_BRIDGE=1
 
