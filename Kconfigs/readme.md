@@ -11,6 +11,8 @@
 
 ####
 	unsorted:
+
+	CONFIG_DEVTMPFS_SAFE=y enabled
 Sysrq disabled
 KGDB  disabled
 KFENCE disabled
