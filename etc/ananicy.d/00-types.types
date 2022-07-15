@@ -1,0 +1,127 @@
+# Type: Game
+# Use more CPU time if possible
+# Games do not always need more IO, but in most cases can be hungry for CPU
+{ "type": "Game", "nice": -5, "ioclass": "best-effort" }
+
+# Type: Player Audio/Video
+# Try to add more CPU power to decrease latency/lags
+# Try to add real time io for avoiding lags
+{ "type": "Player-Audio", "nice": -3, "ioclass": "realtime" }
+{ "type": "Player-Video", "nice": -3, "ioclass": "realtime" }
+
+# Must have more CPU/IO time, but not so much as other apps
+{ "type": "Image-View", "nice": -3 }
+{ "type": "Doc-View",   "nice": -3 }
+
+# Type: Low Latency Realtime Apps
+# In general case not so heavy, but must not lag
+{ "type": "LowLatency_RT", "nice": -10, "ioclass": "realtime" }
+
+# Type: BackGround CPU/IO Load
+# Background CPU/IO it's needed, but it must be as silent as possible
+{ "type": "BG_CPUIO", "nice": 19, "ioclass": "idle", "sched": "idle", "cgroup": "cpu80" }
+
+# Type: Heavy CPU Load
+# It must work fast enough but must not create so much noise
+{ "type": "Heavy_CPU", "nice": 19, "ioclass": "best-effort", "ionice": 7, "cgroup": "cpu90" }
+
+# Type: Chat
+{"type": "Chat", "nice": -1, "ioclass": "best-effort", "ionice": 7 }
+
+# Type: Adj OOM Score
+{ "type": "OOM_KILL", "oom_score_adj": 1000 }
+{ "type": "OOM_NO_KILL", "oom_score_adj": -1000 }
+
+# nice - determines which process gets more CPU cycles
+# ranges from -20 (highest priority) to 19 (lowest priority)
+# default is 0
+
+# ioclass and ionice - determines which process gets more IO
+# avoid changing this as it may cause crashes or hangs
+# realtime - be VERY CAREFUL when giving realtime iocalss to a process; highest priority, very much possible to starve other processes; can be further adjusted with ionice - ranges from 0 (highest priority) to 7 (lowest priority)
+# best-effort - medium priority; can be further adjusted with ionice - ranges from 0 (highest priority) to 7 (lowest priority)
+# idle - lowest priority
+# default ioclass is best-effort; default ionice is 4
+
+### Generic Types
+
+{"type":"archiver", "nice":19, "ionice":7}
+
+{"type":"audio-server", "nice":-11, "ioclass":"realtime"}
+
+{"type":"chat"}
+
+{"type":"compiler", "nice":1}
+
+{"type":"database"}
+
+# desktop environment, window manager or any integral part of a desktop (note: audio-server already has it's own category)
+{"type":"DEWM"}
+
+{"type":"document-editor"}
+
+{"type":"document-viewer"}
+
+{"type":"email-client"}
+
+{"type":"file-manager"}
+
+{"type":"file-sync"}
+
+# increasing a games' priority may cause a crash
+{"type":"game"}
+{"type":"game,CPU_H", "nice":-20}
+{"type":"game,CPU_H,IO_H", "nice":-20, "ionice":0}
+
+{"type":"game-launcher"}
+
+{"type":"image-editor"}
+
+{"type":"image-viewer"}
+
+{"type":"music-player"}
+
+{"type":"p2p-client", "nice":1, "ionice":1}
+
+{"type":"package-manager"}
+
+{"type":"remote-desktop"}
+
+{"type":"server", "nice":1, "ionice":1}
+
+# some services might require less resources than others
+{"type":"service", "nice":1}
+{"type":"service,IO_L", "ionice":7}
+{"type":"service,CPU_L,IO_L", "nice":19, "ionice":7}
+
+{"type":"screenshotter"}
+
+{"type":"terminal"}
+
+{"type":"video-player"}
+
+{"type":"VPN"}
+
+{"type":"VM"}
+
+{"type":"web-browser"}
+
+########################
+### Depricated types ###
+########################
+
+#{ "type": "Heavy_CPU", "nice": 19, "ioclass": "best-effort", "ionice": 7, "cgroup": "cpu90" }
+#{"type":"Heavy_CPU"}
+
+# BackGround CPU/IO Load
+# It's needed, but it must be as silent as possible
+#{"type":"BG_CPUIO", "nice":19, "ioclass":"idle", "sched":"idle", "cgroup":"cpu80" }
+#{"type":"BG_CPUIO"}
+
+#{ "type": "LowLatency_RT", "nice": -10, "ioclass": "realtime" }
+
+########################
+### TODO marker type ###
+########################
+
+{"type":"TODO"}
