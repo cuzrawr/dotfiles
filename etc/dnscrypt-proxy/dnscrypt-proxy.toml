@@ -44,8 +44,7 @@ listen_addresses = ['127.0.0.1:53']
 
 ## Maximum number of simultaneous client connections to accept
 
-max_clients = 2500
-
+max_clients = 250
 
 ## Switch to a different system user after listening sockets have been created.
 ## Note (1): this feature is currently unsupported on Windows.
@@ -87,7 +86,7 @@ require_nofilter = true
 
 
 # Server names to avoid even if they match all criteria
-disabled_server_names = ['scaleway-ams', 'uncensoreddns-ipv4', 'google', 'yandex', 'quad9', 'opennic', 'ibksturm', 'resolver4.dns.openinternet.io', 'zackptg5-us-pit-ipv4', 'cs-ga', 'cs-nc', 'cs-dc', 'cs-nyc2', 'plan9-ns1', 'dnscrypt.ca-1', 'circl-doh', 'doh.ffmuc.net-2', 'safesurfer', 'pf-doh', 'doh.ffmuc.net', 'dnscrypt.ca-1-doh', 'wevpn-useast', 'dnscrypt.ca-2-doh', 'bcn-doh', 'cleanbrowsing-adult', 'doh-cleanbrowsing-family', 'doh-sg-blahdns', 'cs-il', 'wevpn-adblock-useast', 'zackptg5-us-il-ipv4', 'plan9-ns2', 'd0wn-tz-ns1', 'cs-nv', 'cs-la', 'wevpn-adblock-singapore', 'quad101', 'sth-doh-se', 'dnscrypt.ca-2', 'ahadns-doh-la', 'id-gmail-doh', 'ahadns-doh-in', 'cs-montreal', 'dnscrypt-jp-blahdns-ipv4', 'cloudflare-family', 'wevpn-uswest', 'doh-jp-blahdns', 'blahdns', 'opennic-luggs2', 'wevpn-adblock-uswest', 'dnscrypt-sg-blahdns-ipv4', 'quad9-doh-ip4-nofilter-pri', 'dnsforfamily-doh-no-safe-search', 'plan9-ns2-doh', 'doh-crypto-sx', 'doh.tiarap.org', 'ahadns', 'singapore', 'plan9', 'arapurayil', 'moulticast-ca-ipv4', 'useast', 'uswest', 'nyc', 'wevpn', 'dnsforfamily', 'forfamily', 'family', 'cs-ore', 'cs-vancouver', 'cs-sk', 'jp.tiar.app', 'publicarray-au2', 'saldns02-conoha-ipv4', 'userspace-australia', 'saldns01-conoha-ipv4', 'jp.tiar.app-doh', 'deffer-dns.au', 'saldnssg01-conoha-ipv4', 'yepdns-doh-sg', 'arapurayil-doh-in', 'wevpn-singapore', 'quad9-dnscrypt-ip4-nofilter-pri', 'quad9-dnscrypt-ip4-filter-pri', 'cs-tx', 'linuxsec-adguard', 'moulticast-sg-ipv4', 'opennic-luggs', 'dns.therifleman.name', 'id-gmail', 'adguard-dns', 'cs-nyc1', 'linuxsec-doh', 'publicarray-au2-doh', 'publicarray-au', 'publicarray-au-doh', 'indonesia-unfilter-doh', 'jp.tiarap.org']
+disabled_server_names = ['scaleway-ams', 'uncensoreddns-ipv4', 'google', 'yandex', 'quad9', 'opennic', 'ibksturm', 'resolver4.dns.openinternet.io', 'zackptg5-us-pit-ipv4', 'cs-ga', 'cs-nc', 'cs-dc', 'cs-nyc2', 'plan9-ns1', 'dnscrypt.ca-1', 'circl-doh', 'doh.ffmuc.net-2', 'safesurfer', 'pf-doh', 'doh.ffmuc.net', 'dnscrypt.ca-1-doh', 'wevpn-useast', 'dnscrypt.ca-2-doh', 'bcn-doh', 'cleanbrowsing-adult', 'doh-cleanbrowsing-family', 'doh-sg-blahdns', 'cs-il', 'wevpn-adblock-useast', 'zackptg5-us-il-ipv4', 'plan9-ns2', 'd0wn-tz-ns1', 'cs-nv', 'cs-la', 'wevpn-adblock-singapore', 'quad101', 'sth-doh-se', 'dnscrypt.ca-2', 'ahadns-doh-la', 'id-gmail-doh', 'ahadns-doh-in', 'cs-montreal', 'dnscrypt-jp-blahdns-ipv4', 'cloudflare-family', 'wevpn-uswest', 'doh-jp-blahdns', 'blahdns', 'opennic-luggs2', 'wevpn-adblock-uswest', 'dnscrypt-sg-blahdns-ipv4', 'quad9-doh-ip4-nofilter-pri', 'dnsforfamily-doh-no-safe-search', 'plan9-ns2-doh', 'doh-crypto-sx', 'doh.tiarap.org', 'ahadns', 'singapore', 'plan9', 'arapurayil', 'moulticast-ca-ipv4', 'useast', 'uswest', 'nyc', 'wevpn', 'dnsforfamily', 'forfamily', 'family', 'cs-ore', 'cs-vancouver', 'cs-sk', 'jp.tiar.app', 'publicarray-au2', 'saldns02-conoha-ipv4', 'userspace-australia', 'saldns01-conoha-ipv4', 'jp.tiar.app-doh', 'deffer-dns.au', 'saldnssg01-conoha-ipv4', 'yepdns-doh-sg', 'arapurayil-doh-in', 'wevpn-singapore', 'quad9-dnscrypt-ip4-nofilter-pri', 'quad9-dnscrypt-ip4-filter-pri', 'cs-tx', 'linuxsec-adguard', 'moulticast-sg-ipv4', 'opennic-luggs', 'dns.therifleman.name', 'id-gmail', 'adguard-dns', 'cs-nyc1', 'linuxsec-doh', 'publicarray-au2-doh', 'publicarray-au', 'publicarray-au-doh', 'indonesia-unfilter-doh', 'jp.tiarap.org', 'ams-doh-nl', 'dns.digitale-gesellschaft.ch-2', 'dnscrypt.uk-doh-ipv4', 'dnswarden-uncensor-ind1-dc', 'dnswarden-uncensor-ind1-dc', 'dnswarden-uncensor-ind1-doh', 'dnswarden-uncensor-ind1-doh', 'dnswarden-uncensor-sg1-dc', 'dnswarden-uncensor-sg1-dc', 'dnswarden-uncensor-sg1-doh', 'dnswarden-uncensor-sg1-doh', 'dnswarden-uncensor-us1-dc', 'dnswarden-uncensor-us1-doh', 'dnswarden-uncensor-us1-doh', 'doh.appliedprivacy.net', 'opennic-R4SAS', 'plan9dns-fl-doh', 'plan9dns-fl-doh', 'plan9dns-nj', 'plan9dns-nj-doh', 'plan9dns-nj-doh', 'pryv8boi', 'quad9-dnscrypt-ip4-nofilter-ecs-pri', 'quad9-dnscrypt-ip4-nofilter-ecs-pri', 'quad9-doh-ip4-port443-nofilter-ecs-pri', 'quad9-doh-ip4-port443-nofilter-ecs-pri', 'quad9-doh-ip4-port5053-nofilter-ecs-pri', 'sgp-dn53']
 
 
 
@@ -118,7 +117,7 @@ force_tcp = false
 ## increase this. Startup may be slower if you do so.
 ## Don't increase it too much. 10000 is the highest reasonable value.
 
-timeout = 4000
+timeout = 5000
 
 
 ## Keepalive for HTTP (HTTPS, HTTP/2) queries, in seconds
