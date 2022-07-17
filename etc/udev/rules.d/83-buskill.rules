@@ -1,6 +1,6 @@
-#ACTION=="remove", SUBSYSTEM=="usb",
-#ENV{ID_SERIAL_SHORT}=="HWWWWWWWWWWWWW", SUBSYSTEM=,ENV{UDISKS_AUTO}="0", ENV{UDISKS_SYSTEM}="0", RUN+="reboot"
+#ACTION=="remove", SUBSYSTEM=="usb", 
+#ENV{ID_SERIAL_SHORT}=="E6A2170003C1", SUBSYSTEM=,ENV{UDISKS_AUTO}="0", ENV{UDISKS_SYSTEM}="0", RUN+="reboot"
 #ACTION=="remove", ENV{ID_MODEL}=="silicon-power", ENV{ID_VENDOR_ID}=="13fe", ENV{ID_MODEL_ID}=="1f23", RUN+="reboot"
-#ACTION=="remove", SUBSYSTEM=="usb", ATTRS{serial}=="HWWWWWWWWWWWWW", RUN+="echo 1 > /proc/sys/kernel/sysrq && echo s > /proc/sysrq-trigger && echo b > /proc/sysrq-trigger"
+#ACTION=="remove", SUBSYSTEM=="usb", ATTRS{serial}=="E6A2170003C1", RUN+="echo 1 > /proc/sys/kernel/sysrq && echo s > /proc/sysrq-trigger && echo b > /proc/sysrq-trigger"
 #ACTION=="ADD", SUBSYSTEM=="USB", RUN+="reboot"
 #ACTION=="add", SUBSYSTEM=="block"

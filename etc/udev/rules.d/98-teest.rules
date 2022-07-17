@@ -1,0 +1,6 @@
+#SUBSYSTEM=="net", KERNEL=="*", NAME="*", RUN+="/usr/bin/beep"
+# Call custom script when ethernet device(s) are changed/added/removed/etc in system
+#SUBSYSTEM=="net", KERNEL=="*", NAME="*", ACTION=="change", ATTR{carrier}=="0", RUN+="/usr/bin/pkexec /usr/bin/beep"
+#ACTION=="change", SUBSYSTEM=="net", RUN+="/usr/bin/echo aa >> /tmp/test.txt"
+#KERNEL=="wlan0", SUBSYSTEM=="net", DRIVER=="", RUN+="/usr/bin/echo aa >> /tmp/test.txt"
+#ACTION=="*", SUBSYSTEM=="*", RUN+="/usr/bin/beep"

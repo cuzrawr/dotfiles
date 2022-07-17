@@ -1,0 +1,12 @@
+#ACTION=="change", 
+#KERNEL=="card0", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/host/.Xauthority", RUN+="/usr/local/bin/fuck.sh"
+#ACTION=="change", SUBSYSTEM=="drm", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/host/.Xauthority", RUN+="/usr/bin/hotplug.sh"
+#ACTION=="change", SUBSYSTEM=="drm", RUN+="/usr/local/bin/trigger.sh"
+#KERNEL=="sdb",  ATTRS{idVendor}=="1d6b", ACTION=="change", RUN+="/usr/local/bin/trigger.sh"
+#KERNEL=="card0", SUBSYSTEM=="drm", ACTION=="change", GOTO="12345end"
+
+#RUN="/usr/bin/fuckintest"
+
+#LABEL="12345end"
+#ACTION=="change", SUBSYSTEM=="drm", ATTRS{vendor}=="0x8086", RUN+="/usr/bin/fuckintest"
+#KERNEL=="card0", SUBSYSTEM=="drm", RUN="/usr/bin/fuckintest"

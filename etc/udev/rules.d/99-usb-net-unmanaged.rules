@@ -20,12 +20,6 @@
 # tst
 # ACTION=="add", SUBSYSTEM=="net", ENV{ID_BUS}=="usb", ENV{NM_UNMANAGED}="1"
 
-
-
-
-##############
-
-
 #SUBSYSTEM!="net", GOTO="nm_unmanaged_end"
 #ACTION!="add|change", GOTO="nm_unmanaged_end"
 
