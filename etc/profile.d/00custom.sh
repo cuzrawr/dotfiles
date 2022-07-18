@@ -1,6 +1,6 @@
 # install
 # lscolors-git
-. "/usr/share/LS_COLORS/dircolors.sh"
+# . "/usr/share/LS_COLORS/dircolors.sh"
 
 alias ping='ping -i 0.2 -D '
 
@@ -108,3 +108,6 @@ function extract_and_remove {
   rm -f $1
 }
 alias extrr='extract_and_remove '
+
+# scan wifi APs in loop
+alias scanfi='watch -c -n 2 "iwctl station wlan0 scan & iwctl station wlan0 get-networks"'
