@@ -1,4 +1,13 @@
 <driconf>
+  <device screen="0" driver="iris">
+    <application name="Default">
+      <option name="glx_disable_ext_buffer_age" value="true" />
+      <option name="glx_disable_oml_sync_control" value="true" />
+      <option name="glx_disable_sgi_video_sync" value="true" />
+      <option name="mesa_glthread" value="true" />
+      <option name="mesa_no_error" value="true" />
+    </application>
+  </device>
    <device driver="i965">
       <application name="Default">
          <!-- Force on S3TC hardware decompression support -->
