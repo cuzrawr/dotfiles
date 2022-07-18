@@ -14,4 +14,4 @@
 
 # cryptsetup --type luks2 --cipher aes-xts-plain64 --hash sha256 --iter-time 2000 --key-size 256 --pbkdf argon2id --use-urandom --verify-passphrase luksFormat 
 # dev/sda4
-hoom90G	      UUID=9f3b4dd0-69b6-40d9-96c0-99c29502d03c	                    /dev/urandom	    cipher=aes-xts-plain64,size=256,no_read_workqueue,no_write_workqueue,discard,password-echo=no
+home_partition	      UUID=<<<<<<<<<<<<<<<<<<<<<<UUUUUUUIIDDD>>>>>>>>>>>>>	                    /dev/urandom	    cipher=aes-xts-plain64,size=256,no_read_workqueue,no_write_workqueue,discard,password-echo=no

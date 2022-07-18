@@ -18,7 +18,7 @@
 UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>  	/              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 1
 # home
 #UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
-/dev/mapper/hoome                              /home              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 0
+/dev/mapper/home_partition                              /home              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 0
 
 # UEFI partition
 UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>                                  /boot/EFI      vfat   umask=0077 0 2
