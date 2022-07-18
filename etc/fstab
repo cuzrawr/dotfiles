@@ -5,33 +5,35 @@
 # /dev/sda3
 
 #
-#	 _____ __ __ _____ 
+#	 _____ __ __ _____
 #	|   __|  |  |   __|
 #	|__   |_   _|__   |
 #	|_____| |_| |_____|
-#	                   
+#
 
-# as an general recomendation is drop fs-level discard and enable systemd fstrim.timer service: 
+# as an general recomendation is drop fs-level discard and enable systemd fstrim.timer service:
 #  systemctl enable --now fstrim.timer
 
 # System
-UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473	/              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 1                
+UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>  	/              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 1
 # home
-UUID=2f6b991f-ef9e-46ad-bb38-87bb71c2285b       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
+#UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>       /home          f2fs   defaults,nobarrier,nodiscard,fastboot 0 0
+/dev/mapper/hoome                              /home              ext4   data=writeback,noauto_da_alloc,nodiscard,barrier=0,lazytime,commit=120,errors=remount-ro 0 0
+
 # UEFI partition
-UUID=B14D-138A                                  /boot/EFI      vfat   umask=0077 0 2
+UUID=<<<<<<<<<<<UUIIIDDD>>>>>>>>>>>>>>>                                  /boot/EFI      vfat   umask=0077 0 2
 # experimental /proc
 # that item break automatic mounts in Thunar:
 #proc	 /proc  	proc	  nosuid,nodev,noexec,hidepid=2,gid=proc  	0	  0
 
 
 
-#                        
-#	 _____ _ _ _ _____ _____ 
+#
+#	 _____ _ _ _ _____ _____
 #	|   __| | | |  _  |  _  |
 #	|__   | | | |     |   __|
-#	|_____|_____|__|__|__|   
-# 
+#	|_____|_____|__|__|__|
+#
 
 # pri= higher number means more priority.
 #
@@ -44,14 +46,14 @@ UUID=B14D-138A                                  /boot/EFI      vfat   umask=0077
 
 /dev/zram0 none swap defaults,pri=2048 0 0
 
-#                               
-#	 _____ _____ _____ _____ _____ 
+#
+#	 _____ _____ _____ _____ _____
 #	|_   _|     |  _  |   __|   __|
 #	  | | | | | |   __|   __|__   |
 #	  |_| |_|_|_|__|  |__|  |_____|
 #
 
-# Experimental.                             
+# Experimental.
 
 tmpfs                                     /tmp           tmpfs   defaults,size=42%,noatime,mode=1777 0 0
 tmpfs                                     /var/log       tmpfs   defaults,size=10%,noexec,noatime,mode=1777 0 0
@@ -64,21 +66,21 @@ none /dev/shm tmpfs defaults,nosuid,noexec,rw 0 0
 #
 
 # Mozilla shit
-tmpfs /home/host/.cache/mozilla tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.cache/mozilla tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
 # Chromium shit
-tmpfs /home/host/.cache/chromium tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.cache/chromium tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 #
-tmpfs /home/host/.config/chromium/Default/Service\040Worker tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/Default/Service\040Worker tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 #
-tmpfs /home/host/.config/chromium/Crash\040Reports  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
-tmpfs /home/host/.config/chromium/GrShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
-tmpfs /home/host/.config/chromium/ShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
-tmpfs /home/host/.config/chromium/Default/GPUCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
-tmpfs /home/host/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/Crash\040Reports  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/GrShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/ShaderCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/Default/GPUCache  tmpfs  noexec,noatime,nodev,mode=1777,nosuid,size=2% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/chromium/Default/optimization_guide_hint_cache_store  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
 # mesa trash
-tmpfs /home/host/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
+tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.config/mesa_shader_cache tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=5% 0 0
 
 # root trash
 #
@@ -95,9 +97,9 @@ tmpfs /root/.cache  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 # https://manpages.debian.org/testing/initscripts/tmpfs.5.en.html
 #
 tmpfs   /run    tmpfs        nodev,nosuid,size=5%,mode=755   0       0
-tmpfs   /run/lock    tmpfs   noexec,nosuid,nodev,mode=1777      0 0 
+tmpfs   /run/lock    tmpfs   noexec,nosuid,nodev,mode=1777      0 0
 
 # nvidia
 #
-#tmpfs /home/host/.nv  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
+#tmpfs /home/<<<<<<<<<UUUSSSSERRRRRRRRRRRRRRRR>>>>>>>>/.nv  tmpfs noexec,noatime,nodev,mode=1777,nosuid,size=1% 0 0
 
