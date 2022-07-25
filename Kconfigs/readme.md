@@ -38,3 +38,18 @@ CONFIG_X86_MCE_INJECT:   disabled
 CONFIG_X86_CHECK_BIOS_CORRUPTION:     enabled
 
 
+#################################### upd2 (notebook)
+
+vsyscal            - disabled
+kernel crash dumps - disabled
+[ ]   Jailhouse non-root cell support        - disabled                                                     │
+[ ]   ACRN Guest support                  - disabled                                                               │
+CONFIG_IA32_EMULATION                    - disabled 32 bit legacy programs
+CONFIG_KPROBES:        disabled
+CONFIG_TRIM_UNUSED_KSYMS:                      enabled
+CONFIG_BLK_DEBUG_FS:                 disabled
+CONFIG_RXKAD:                      disabled
+CONFIG_CFG80211_CRDA_SUPPORT:            enabled
+CONFIG_MAC80211_MESSAGE_TRACING:           disabled
+CONFIG_EFI_DISABLE_RUNTIME:                                  enabled
+
