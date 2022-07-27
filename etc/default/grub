@@ -35,11 +35,12 @@ GRUB_DISTRIBUTOR='Lenoux'
 # scsi_mod.use_blk_mq=0 dm_mod.use_blk_mq=0 - disabled
 # If you use the base mkinitcpio hook, you can force fsck at boot time by passing fsck.mode=force as a kernel parameter. This will check every file system you have on the machine.
 
-# libata.force=noncqtrim
+# libata.force=noncqtrim  - cause errs in samsung ssd
 
 # rd.luks.options=password-echo=no    - disable ***** when typing crypt password
 
-GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473 resume_offset=4562944 fsck.mode=force quiet loglevel=2 rd.systemd.show_status=auto rd.udev.log_level=2 rd.luks.options=password-echo=no libata.force=noncqtrim ahci.mobile_lpm_policy=1 tsx=on tsx_async_abort=off intel_iommu=off,igfx_off mds=full drm.debug=0 ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable logo.nologo rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog mem_encrypt=off pnp.debug=0  mem_sleep_default=deep snd_hda_intel.dmic_detect=0"
+
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=54e54bd5-a1df-424c-bf5e-f919a67f5473 resume_offset=4562944 fsck.mode=force quiet  mitigations=off  loglevel=3 rd.systemd.show_status=auto rd.udev.log_level=3 rd.luks.options=password-echo=no ahci.mobile_lpm_policy=1 tsx=on tsx_async_abort=off intel_iommu=off,igfx_off mds=full drm.debug=0 ipv6.disable_ipv6=1 intel_pstate=enable pcie_aspm=force psmouse.synaptics_intertouch=1 lar_disable=Y cryptomgr.notests kvm-intel.nested=1 no_timer_check replace-smp page_alloc.shuffle=1 rcupdate.rcu_expedited=1 tsc=reliable logo.nologo rd.udev.log-priority=0 udev.log-priority=0 enforcing=0 ftrace_enabled=0 panic=5 kmemcheck=0 memory_corruption_check=0 memory_corruption_check_period=0 nowatchdog mem_encrypt=off pnp.debug=0  mem_sleep_default=deep snd-intel-dspcfg.dsp_driver=1  ima_appraise=off "
 #GRUB_CMDLINE_LINUX_DEFAULT=""
 #GRUB_CMDLINE_LINUX_DEFAULT=" loglevel=2"
 #custom microcode https://aur.archlinux.org/packages/intel-ucode-clear
@@ -61,7 +62,7 @@ GRUB_EARLY_INITRD_LINUX_CUSTOM=" intel-ucode.cpio i915-firmware.cpio.xz "
 GRUB_SAVEDEFAULT=true
 
 # Preload both GPT and MBR modules so that they are not missed
-GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+#GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 
 # Uncomment to enable booting from LUKS encrypted devices
 #GRUB_ENABLE_CRYPTODISK=y
@@ -85,7 +86,7 @@ GRUB_TERMINAL_OUTPUT=console
 #GRUB_GFXMODE=auto
 
 # Uncomment to allow the kernel use the same resolution used by grub
-# GRUB_GFXPAYLOAD_LINUX=keep
+#GRUB_GFXPAYLOAD_LINUX=keep
 
 # Uncomment if you want GRUB to pass to the Linux kernel the old parameter
 # format "root=/dev/xxx" instead of "root=/dev/disk/by-uuid/xxx"
