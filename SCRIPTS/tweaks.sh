@@ -134,3 +134,13 @@ xfconf-query --create -c xfce4-session -p /general/LockCommand -t string -s "i3l
 # Archlinux mirrorlist sort example with reflector software
 reflector --ipv4 --country 'France,Germany,Ukraine,Moldova,Slovakia,Belarus,Poland,Hungary,Romania,Bulgaria,Georgia' --fastest 10 --verbose --save /tmp/mirrorlist.txt
 
+
+
+#
+# disable ask-password ( its hangs in background )
+
+systemctl disable systemd-ask-password-wall.service
+systemctl disable systemd-ask-password-wall.path
+systemctl mask systemd-ask-password-wall.service
+systemctl mask systemd-ask-password-wall.path
+#
